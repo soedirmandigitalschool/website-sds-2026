@@ -1,24 +1,25 @@
 import { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import './Navbar.css';
 
 const NAV_LINKS = [
-  { label: 'Home', href: '#home' },
-  { label: 'About', href: '#about' },
-  { label: 'Course', href: '#learning-path' },
-  { label: 'Timeline', href: '#timeline' },
+  { label: 'Home', href: '/#home' },
+  { label: 'About', href: '/#about' },
+  { label: 'Course', href: '/#learning-path' },
+  { label: 'Timeline', href: '/#timeline' },
   { 
     label: 'Showcase', 
-    href: '#benefit', 
+    href: '#', 
     isDropdown: true,
     dropdownItems: [
-      { label: 'Best Student', href: '#best-student' },
-      { label: 'After Movie', href: '#after-movie' },
-      { label: 'Awarding', href: '#awarding' },
-      { label: 'Media Partner', href: '#media-partner' },
-      { label: 'Kunjungi Kami', href: '#kunjungi-kami' }
+      { label: 'Best Student', href: '/coming-soon' },
+      { label: 'After Movie', href: '/coming-soon' },
+      { label: 'Awarding', href: '/awarding' },
+      { label: 'Media Partner', href: '/coming-soon' },
+      { label: 'Kunjungi Kami', href: '/coming-soon' }
     ]
   },
-  { label: 'FAQ', href: '#faq' },
+  { label: 'FAQ', href: '/#faq' },
 ];
 
 export default function Navbar() {
@@ -36,45 +37,45 @@ export default function Navbar() {
   return (
     <nav className={`navbar ${isScrolled ? 'navbar--scrolled' : ''}`}>
       <div className="navbar__inner">
-        <a href="#home" className="navbar__brand">
+        <Link to="/#home" className="navbar__brand">
           <img src="/assets/LOGO SDS 26.png" alt="SDS Logo" className="navbar__logo" />
           <div className="navbar__brand-text">
             <span className="navbar__brand-name">Soedirman Digital School</span>
             <span className="navbar__brand-sub">BEM Unsoed 2026</span>
           </div>
-        </a>
+        </Link>
 
         <div className={`navbar__links ${isMobileOpen ? 'navbar__links--open' : ''}`}>
           {NAV_LINKS.map((link) => (
             link.isDropdown ? (
               <div className="navbar__dropdown-container" key={link.href}>
                 <a
-                  href={link.href}
+                  href="#"
                   className="navbar__link navbar__link--dropdown"
-                  onClick={handleLinkClick}
+                  onClick={(e) => { e.preventDefault(); handleLinkClick(); }}
                 >
                   {link.label}
                 </a>
                 <div className="navbar__dropdown-menu">
                   {link.dropdownItems.map(item => (
-                    <a key={item.href} href={item.href} className="navbar__dropdown-item" onClick={handleLinkClick}>
+                    <Link key={item.href} to={item.href} className="navbar__dropdown-item" onClick={handleLinkClick}>
                       {item.label}
-                    </a>
+                    </Link>
                   ))}
                 </div>
               </div>
             ) : (
-              <a
+              <Link
                 key={link.href}
-                href={link.href}
+                to={link.href}
                 className="navbar__link"
                 onClick={handleLinkClick}
               >
                 {link.label}
-              </a>
+              </Link>
             )
           ))}
-          <a href="#home" className="navbar__cta" onClick={handleLinkClick}>Daftar</a>
+          <Link to="/#home" className="navbar__cta" onClick={handleLinkClick}>Daftar</Link>
         </div>
 
         <button

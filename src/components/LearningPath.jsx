@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import { useInView } from '../hooks/useInView';
 import { OceanDecorations } from './Decorations';
 import './LearningPath.css';
@@ -5,6 +6,7 @@ import './LearningPath.css';
 const PATHS = [
   {
     title: 'GRAPHIC DESIGNER',
+    path: '/course/graphic-design',
     image: '/assets/design graphic.jpg',
     points: [
       'Mahasiswa aktif S1/Vokasi Universitas Jenderal Soedirman dan terbuka untuk Umum.',
@@ -16,6 +18,7 @@ const PATHS = [
   },
   {
     title: 'DATA ANALYST',
+    path: '/course/data-analyst',
     image: '/assets/data anaylst.jpg',
     points: [
       'Mahasiswa aktif S1/Vokasi Universitas Jenderal Soedirman dan terbuka untuk Umum.',
@@ -28,6 +31,7 @@ const PATHS = [
   },
   {
     title: 'SOSMED SPECIALIST',
+    path: '/course/sosmed-specialist',
     image: '/assets/social media specialist.jpg',
     points: [
       'Mahasiswa aktif S1/Vokasi Universitas Jenderal Soedirman dan terbuka untuk Umum.',
@@ -70,7 +74,7 @@ export default function LearningPath() {
                 </div>
               </div>
               <div className="learning-path__card-footer">
-                <a href="#" className="learning-path__btn">
+                <Link to={path.path} className="learning-path__btn">
                   Selengkapnya
                   <span className="learning-path__arrow">
                     <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" strokeWidth="2.5" fill="none" strokeLinecap="round" strokeLinejoin="round">
@@ -79,7 +83,7 @@ export default function LearningPath() {
                       <line x1="10" y1="14" x2="21" y2="3"></line>
                     </svg>
                   </span>
-                </a>
+                </Link>
               </div>
             </div>
           ))}

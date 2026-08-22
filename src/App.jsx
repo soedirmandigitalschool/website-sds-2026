@@ -1,29 +1,29 @@
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './App.css';
 import Navbar from './components/Navbar';
-import Hero from './components/Hero';
-import MediaPartner from './components/MediaPartner';
-import About from './components/About';
-import BenefitProgram from './components/BenefitProgram';
-import Timeline from './components/Timeline';
-import LearningPath from './components/LearningPath';
-import FAQ from './components/FAQ';
 import Footer from './components/Footer';
+import ScrollToTop from './components/ScrollToTop';
+
+import Home from './pages/Home';
+import ComingSoon from './pages/ComingSoon';
+import Awarding from './pages/Awarding';
+import CourseSyllabus from './pages/CourseSyllabus';
 
 function App() {
   return (
-    <div className="app">
-      <Navbar />
-      <main>
-        <Hero />
-        <MediaPartner />
-        <About />
-        <BenefitProgram />
-        <Timeline />
-        <LearningPath />
-        <FAQ />
-      </main>
-      <Footer />
-    </div>
+    <Router>
+      <ScrollToTop />
+      <div className="app">
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/coming-soon" element={<ComingSoon />} />
+          <Route path="/awarding" element={<Awarding />} />
+          <Route path="/course/:courseId" element={<CourseSyllabus />} />
+        </Routes>
+        <Footer />
+      </div>
+    </Router>
   );
 }
 
