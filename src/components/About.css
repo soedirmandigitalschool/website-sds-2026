@@ -1,0 +1,46 @@
+.about {
+  position: relative;
+  padding: 30px 0 20px;
+  background: linear-gradient(180deg, #159eaf 0%, #20b0b0 100%);
+  overflow: hidden;
+}
+
+.about__bg-istana {
+  position: absolute;
+  top: 50%;
+  left: 5%;
+  width: 150px;
+  opacity: 0.15;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+.about__bg-pohon {
+  position: absolute;
+  top: 50%;
+  right: 5%;
+  width: 120px;
+  opacity: 0.2;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+.about__inner {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.about__text {
+  font-size: 1rem;
+  color: var(--color-white);
+  line-height: 1.6;
+  font-weight: 400;
+  margin-top: 10px;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.2);
+}
+
+@media (max-width: 768px) {
+  .about { padding: 20px 0; }
+  .about__text { font-size: 0.9rem; padding: 0 16px; }
+}

@@ -1,0 +1,155 @@
+.footer {
+  position: relative;
+  background: linear-gradient(180deg, #106b82 0%, #0a1628 100%);
+  padding: 100px 0 20px;
+  overflow: hidden;
+  margin-top: -20px; /* Blend seamlessly with FAQ */
+}
+
+/* Background elements */
+.footer__birds {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.footer__bird {
+  position: absolute;
+  opacity: 0.5;
+  animation: birdFly 8s ease-in-out infinite;
+}
+
+.footer__bird--1 { top: 20%; left: 10%; width: 30px; }
+.footer__bird--2 { top: 30%; right: 15%; width: 20px; animation-delay: -3s; }
+
+.footer__ship {
+  position: absolute;
+  top: 20px;
+  right: -50px;
+  width: 400px;
+  opacity: 0.4; /* Reference shows ship very faintly in background */
+  pointer-events: none;
+  animation: floatSlow 6s ease-in-out infinite;
+}
+
+/* Content Layout */
+.footer__content {
+  position: relative;
+  z-index: 5;
+}
+
+.footer__grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 40px;
+  margin-bottom: 40px;
+  padding-bottom: 30px;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.footer__brand-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.footer__logo {
+  width: 50px;
+  height: 50px;
+}
+
+.footer__brand-name {
+  font-family: var(--font-body);
+  font-weight: 700;
+  color: var(--color-white);
+  font-size: 1.1rem;
+  line-height: 1.2;
+}
+
+.footer__brand-sub {
+  color: var(--color-sky);
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.footer__desc {
+  font-size: 0.85rem;
+  color: rgba(255,255,255,0.8);
+  line-height: 1.6;
+  max-width: 300px;
+}
+
+.footer__heading {
+  font-family: var(--font-body);
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--color-white);
+  margin-bottom: 20px;
+}
+
+.footer__list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.footer__list a {
+  font-size: 0.85rem;
+  color: rgba(255,255,255,0.7);
+  transition: color var(--transition-fast);
+}
+
+.footer__list a:hover {
+  color: var(--color-sky);
+}
+
+.footer__socials {
+  display: flex;
+  gap: 16px;
+}
+
+.footer__socials a {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-white);
+  font-size: 0.8rem;
+  font-weight: bold;
+  transition: background var(--transition-fast), transform var(--transition-fast);
+}
+
+.footer__socials a:hover {
+  background: var(--color-sky);
+  transform: translateY(-2px);
+}
+
+.footer__bottom {
+  text-align: center;
+  font-size: 0.8rem;
+  color: rgba(255,255,255,0.5);
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 900px) {
+  .footer__grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+  }
+}
+
+@media (max-width: 600px) {
+  .footer__grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  .footer__ship { display: none; }
+  .footer { padding-top: 60px; }
+}

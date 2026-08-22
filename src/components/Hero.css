@@ -1,0 +1,347 @@
+/* ===== Hero Section ===== */
+.hero {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+  padding: 130px 0 0;
+  /* Full background — deep teal matching reference */
+  background: linear-gradient(
+    180deg,
+    #0b3350 0%,
+    #0d4a6a 18%,
+    #0f6880 40%,
+    #13909e 65%,
+    #17a5b5 85%,
+    #18a8b8 100%
+  );
+  min-height: 100vh;
+}
+
+/* ===== Background light rays (radial streaks from center-top) ===== */
+.hero__rays {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 200%;
+  height: 100%;
+  background:
+    radial-gradient(ellipse 50% 45% at 50% 20%, rgba(255,255,255,0.06) 0%, transparent 70%),
+    conic-gradient(
+      from 180deg at 50% 8%,
+      transparent 0deg,
+      rgba(255,255,255,0.04) 8deg,
+      transparent 16deg,
+      rgba(255,255,255,0.03) 28deg,
+      transparent 38deg,
+      rgba(255,255,255,0.05) 48deg,
+      transparent 58deg,
+      rgba(255,255,255,0.03) 70deg,
+      transparent 82deg,
+      rgba(255,255,255,0.04) 92deg,
+      transparent 102deg,
+      rgba(255,255,255,0.03) 115deg,
+      transparent 128deg,
+      rgba(255,255,255,0.05) 138deg,
+      transparent 148deg,
+      rgba(255,255,255,0.04) 160deg,
+      transparent 172deg,
+      rgba(255,255,255,0.04) 188deg,
+      transparent 198deg,
+      rgba(255,255,255,0.03) 212deg,
+      transparent 222deg,
+      rgba(255,255,255,0.05) 232deg,
+      transparent 242deg,
+      rgba(255,255,255,0.03) 258deg,
+      transparent 268deg,
+      rgba(255,255,255,0.04) 278deg,
+      transparent 288deg,
+      rgba(255,255,255,0.03) 302deg,
+      transparent 312deg,
+      rgba(255,255,255,0.05) 322deg,
+      transparent 332deg,
+      rgba(255,255,255,0.04) 345deg,
+      transparent 360deg
+    );
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* ===== Decorative birds ===== */
+.hero__bird {
+  position: absolute;
+  z-index: 3;
+  animation: birdFly 7s ease-in-out infinite;
+  opacity: 0.85;
+  filter: brightness(0) invert(1);
+}
+
+/* Left group of birds */
+.hero__bird--1 { width: 32px; top: 10%; left: 5%;  }
+.hero__bird--2 { width: 22px; top: 14%; left: 9%;  animation-delay: -2s; opacity: 0.7; }
+.hero__bird--3 { width: 18px; top: 18%; left: 7%;  animation-delay: -4s; opacity: 0.55; }
+.hero__bird--4 { width: 26px; top: 13%; left: 13%; animation-delay: -1s; opacity: 0.6; }
+
+/* Right group of birds */
+.hero__bird--5 { width: 30px; top: 7%;  right: 7%;  animation-delay: -3s; opacity: 0.8; }
+.hero__bird--6 { width: 20px; top: 11%; right: 4%;  animation-delay: -5s; opacity: 0.65; }
+.hero__bird--7 { width: 24px; top: 14%; right: 10%; animation-delay: -1.5s; opacity: 0.7; }
+.hero__bird--8 { width: 16px; top: 9%;  right: 13%; animation-delay: -6s; opacity: 0.5; }
+
+/* ===== Content ===== */
+.hero__content {
+  position: relative;
+  z-index: 10;
+  text-align: center;
+  padding: 0 24px;
+  max-width: 950px;
+  margin: 0 auto;
+}
+
+.hero__title {
+  font-family: var(--font-cutenes);
+  font-size: 5.5rem;
+  color: var(--color-white);
+  margin-bottom: 14px;
+  letter-spacing: 3px;
+  -webkit-text-stroke: 2px var(--color-white);
+  text-shadow:
+    -2px -2px 0 var(--color-deep-blue),
+    2px -2px 0 var(--color-deep-blue),
+    -2px 2px 0 var(--color-deep-blue),
+    2px 2px 0 var(--color-deep-blue),
+    4px 4px 0 var(--color-deep-blue),
+    0 0 20px rgba(255, 255, 255, 0.3);
+  line-height: 1.05;
+  text-transform: uppercase;
+}
+
+.hero__subtitle {
+  font-family: var(--font-body);
+  font-size: 1.35rem;
+  color: var(--color-white);
+  margin-bottom: 10px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.4);
+}
+
+.hero__desc {
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.9);
+  max-width: 560px;
+  margin: 0 auto 28px;
+  line-height: 1.55;
+  font-weight: 400;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+}
+
+.hero__actions {
+  display: flex;
+  gap: 28px;
+  justify-content: center;
+}
+
+.hero__btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  font-weight: 700;
+  padding: 14px 52px;
+  border-radius: var(--radius-pill);
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+  letter-spacing: 0.5px;
+}
+
+.hero__btn--primary {
+  background: #0c3d5f;
+  color: var(--color-white);
+  border: 2px solid #0c3d5f;
+}
+
+.hero__btn--primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(12, 61, 95, 0.5);
+}
+
+.hero__btn--secondary {
+  background: #0c3d5f;
+  color: var(--color-white);
+  border: 2px solid #0c3d5f;
+}
+
+.hero__btn--secondary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(12, 61, 95, 0.5);
+}
+
+/* ===== Bottom scene: multi-layered clouds + mascot ===== */
+.hero__bottom-scene {
+  position: relative;
+  width: 100%;
+  z-index: 5;
+  margin-top: 24px;
+  height: 420px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+/* ===== Cloud layers ===== */
+.hero__cloud {
+  position: absolute;
+  pointer-events: none;
+}
+
+/* --- Back layer: largest clouds, slightly transparent --- */
+.hero__cloud--back-left {
+  bottom: 20px;
+  left: -12%;
+  width: 65%;
+  max-width: 850px;
+  z-index: 4;
+  opacity: 0.7;
+  transform: rotate(-3deg);
+}
+
+.hero__cloud--back-right {
+  bottom: 20px;
+  right: -12%;
+  width: 65%;
+  max-width: 850px;
+  z-index: 4;
+  opacity: 0.7;
+  transform: scaleX(-1) rotate(-3deg);
+}
+
+/* --- Main layer: most visible, prominent clouds --- */
+.hero__cloud--main-left {
+  bottom: -5px;
+  left: -8%;
+  width: 58%;
+  max-width: 780px;
+  z-index: 6;
+  opacity: 1;
+}
+
+.hero__cloud--main-right {
+  bottom: -5px;
+  right: -8%;
+  width: 58%;
+  max-width: 780px;
+  z-index: 6;
+  opacity: 1;
+  transform: scaleX(-1);
+}
+
+/* --- Front layer: smaller wisps on top --- */
+.hero__cloud--front-left {
+  bottom: 30px;
+  left: -3%;
+  width: 42%;
+  max-width: 560px;
+  z-index: 8;
+  opacity: 0.85;
+  transform: rotate(5deg) scale(0.8);
+}
+
+.hero__cloud--front-right {
+  bottom: 30px;
+  right: -3%;
+  width: 42%;
+  max-width: 560px;
+  z-index: 8;
+  opacity: 0.85;
+  transform: scaleX(-1) rotate(5deg) scale(0.8);
+}
+
+/* ===== Glow behind mascot ===== */
+.hero__glow {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 500px;
+  height: 350px;
+  background: radial-gradient(
+    ellipse at center bottom,
+    rgba(160, 220, 240, 0.3) 0%,
+    rgba(100, 200, 230, 0.15) 30%,
+    transparent 70%
+  );
+  z-index: 5;
+  pointer-events: none;
+}
+
+/* ===== Character — centered between clouds ===== */
+.hero__character {
+  position: relative;
+  z-index: 7;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  margin-bottom: -5px;
+}
+
+.hero__character img {
+  width: 280px;
+  height: auto;
+  animation: float 5s ease-in-out infinite;
+  filter: drop-shadow(0 10px 30px rgba(0, 0, 0, 0.35));
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 1200px) {
+  .hero__title { font-size: 4.5rem; }
+  .hero__bottom-scene { height: 360px; }
+  .hero__character img { width: 250px; }
+}
+
+@media (max-width: 1024px) {
+  .hero { padding-top: 120px; min-height: auto; }
+  .hero__title { font-size: 3.5rem; }
+  .hero__subtitle { font-size: 1.15rem; }
+  .hero__desc { font-size: 0.95rem; }
+  .hero__character img { width: 220px; }
+  .hero__bottom-scene { height: 300px; }
+  .hero__cloud--back-left,
+  .hero__cloud--back-right { width: 60%; }
+  .hero__cloud--main-left,
+  .hero__cloud--main-right { width: 55%; }
+  .hero__cloud--front-left,
+  .hero__cloud--front-right { width: 40%; }
+}
+
+@media (max-width: 768px) {
+  .hero { padding-top: 100px; }
+  .hero__title { font-size: 2.4rem; letter-spacing: 1px; }
+  .hero__subtitle { font-size: 1rem; }
+  .hero__desc { font-size: 0.85rem; margin-bottom: 20px; max-width: 90%; }
+  .hero__btn { font-size: 0.9rem; padding: 12px 30px; }
+  .hero__actions { gap: 16px; }
+  .hero__character img { width: 180px; }
+  .hero__bottom-scene { height: 250px; margin-top: 16px; }
+  .hero__cloud--back-left,
+  .hero__cloud--back-right { width: 65%; }
+  .hero__cloud--main-left,
+  .hero__cloud--main-right { width: 60%; }
+  .hero__cloud--front-left,
+  .hero__cloud--front-right { width: 45%; }
+  .hero__glow { width: 300px; height: 220px; }
+  .hero__bird--4,
+  .hero__bird--8 { display: none; }
+}
+
+@media (max-width: 480px) {
+  .hero { padding-top: 90px; }
+  .hero__title { font-size: 1.8rem; }
+  .hero__subtitle { font-size: 0.9rem; }
+  .hero__desc { font-size: 0.8rem; }
+  .hero__btn { font-size: 0.8rem; padding: 10px 24px; }
+  .hero__character img { width: 150px; }
+  .hero__bottom-scene { height: 200px; }
+  .hero__glow { width: 220px; height: 160px; }
+}

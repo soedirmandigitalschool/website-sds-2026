@@ -1,0 +1,37 @@
+/* ===== App-level styles ===== */
+
+.app {
+  width: 100%;
+  min-height: 100vh;
+  overflow-x: hidden;
+  position: relative;
+}
+
+/* Smooth section transitions — no hard color breaks */
+main {
+  position: relative;
+}
+
+/* Selection colors */
+::selection {
+  background: rgba(21, 163, 176, 0.3);
+  color: var(--color-dark-text);
+}
+
+/* Scrollbar styling for webkit browsers */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-deep-blue);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-teal);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-turquoise);
+}

@@ -1,0 +1,123 @@
+/* Bubbles */
+.ocean-bubble {
+  position: absolute;
+  bottom: -50px;
+  border-radius: 50%;
+  border: 1.5px solid rgba(255, 255, 255, 0.4);
+  background: rgba(255, 255, 255, 0.1);
+  animation: bubbleRise linear infinite;
+  pointer-events: none;
+  z-index: 1;
+}
+
+@keyframes bubbleRise {
+  0% {
+    transform: translateY(0) translateX(0) scale(0.8);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  50% {
+    transform: translateY(-300px) translateX(20px) scale(1);
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-600px) translateX(-20px) scale(1.2);
+    opacity: 0;
+  }
+}
+
+/* Fish */
+.ocean-fish {
+  position: absolute;
+  width: 60px;
+  height: 30px;
+  color: rgba(255, 255, 255, 0.15);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.ocean-fish--right {
+  left: -100px;
+  animation: fishSwimRight linear infinite;
+}
+
+.ocean-fish--left {
+  right: -100px;
+  animation: fishSwimLeft linear infinite;
+}
+
+@keyframes fishSwimRight {
+  0% {
+    transform: translateX(0) translateY(0);
+  }
+  50% {
+    transform: translateX(50vw) translateY(-20px);
+  }
+  100% {
+    transform: translateX(100vw) translateY(10px);
+  }
+}
+
+@keyframes fishSwimLeft {
+  0% {
+    transform: translateX(0) translateY(0);
+  }
+  50% {
+    transform: translateX(-50vw) translateY(20px);
+  }
+  100% {
+    transform: translateX(-100vw) translateY(-10px);
+  }
+}
+
+/* Wave Lines */
+.ocean-wave-line {
+  position: absolute;
+  left: 0;
+  width: 200%;
+  height: 50px;
+  pointer-events: none;
+  z-index: 1;
+  animation: waveSway 20s linear infinite;
+}
+
+.ocean-wave-line svg {
+  width: 100%;
+  height: 100%;
+}
+
+@keyframes waveSway {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(-10%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+/* Container */
+.ocean-decorations {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1;
+  overflow: hidden;
+}
+
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  .ocean-bubble,
+  .ocean-fish,
+  .ocean-wave-line {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    opacity: 0.3 !important; /* Keep visible but static */
+  }
+}

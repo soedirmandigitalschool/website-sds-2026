@@ -1,0 +1,284 @@
+/* ===== Fonts ===== */
+@font-face {
+  font-family: 'Cutenes Monster';
+  src: url('/assets/font/cutenes_monster/CutenesMonster -personal use.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Gontserrat';
+  src: url('/assets/font/gontserrat/Gontserrat-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Gontserrat';
+  src: url('/assets/font/gontserrat/Gontserrat-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Gontserrat';
+  src: url('/assets/font/gontserrat/Gontserrat-Black.ttf') format('truetype');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* ===== SDS26 Design System ===== */
+
+:root {
+  /* Color Palette — Nautical/Pirate Theme */
+  --color-navy: #0a1628;
+  --color-deep-blue: #0c3d5f;
+  --color-ocean: #0e6e82;
+  --color-teal: #0e8b8b;
+  --color-turquoise: #15a3b0;
+  --color-sky: #45c6d6;
+  --color-sky-light: #7dd8e4;
+  --color-aqua: #a3e8ef;
+  --color-mint: #c5f0e9;
+  --color-green-accent: #2cb67d;
+  --color-white: #ffffff;
+  --color-off-white: #f0f9fa;
+  --color-dark-text: #0a1628;
+  --color-body-text: #1a3a4a;
+  --color-light-text: rgba(255, 255, 255, 0.85);
+
+  /* Typography */
+  --font-body: 'Gontserrat', system-ui, -apple-system, sans-serif;
+  --font-heading: 'Gontserrat', cursive;
+  --font-cutenes: 'Cutenes Monster', cursive;
+
+  /* Spacing */
+  --section-padding: 80px 0;
+  --container-width: 1200px;
+  --container-padding: 0 24px;
+
+  /* Shadows */
+  --shadow-card: 0 4px 20px rgba(10, 22, 40, 0.12);
+  --shadow-card-hover: 0 8px 32px rgba(10, 22, 40, 0.2);
+  --shadow-navbar: 0 2px 20px rgba(10, 22, 40, 0.1);
+
+  /* Transitions */
+  --transition-fast: 0.2s ease;
+  --transition-base: 0.3s ease;
+  --transition-slow: 0.5s ease;
+
+  /* Border Radius */
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+  --radius-xl: 28px;
+  --radius-pill: 999px;
+}
+
+/* ===== Reset & Base ===== */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--color-dark-text);
+  background: var(--color-turquoise);
+  overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+button {
+  cursor: pointer;
+  font-family: var(--font-body);
+  border: none;
+  outline: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  line-height: 1.2;
+}
+
+/* ===== Container ===== */
+.container {
+  width: 100%;
+  max-width: var(--container-width);
+  margin: 0 auto;
+  padding: var(--container-padding);
+}
+
+/* ===== Section Title ===== */
+.section-title {
+  font-family: var(--font-heading);
+  font-size: 2.2rem;
+  color: var(--color-white);
+  text-align: center;
+  margin-bottom: 16px;
+  letter-spacing: 1px;
+}
+
+.section-title--dark {
+  color: var(--color-dark-text);
+}
+
+.section-subtitle {
+  font-size: 1rem;
+  color: var(--color-light-text);
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 40px;
+  font-weight: 300;
+}
+
+/* ===== Scroll Animations ===== */
+.fade-up {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.fade-up.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Stagger children */
+.fade-up-stagger > * {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.fade-up-stagger.visible > *:nth-child(1) { transition-delay: 0s; }
+.fade-up-stagger.visible > *:nth-child(2) { transition-delay: 0.1s; }
+.fade-up-stagger.visible > *:nth-child(3) { transition-delay: 0.2s; }
+.fade-up-stagger.visible > *:nth-child(4) { transition-delay: 0.15s; }
+.fade-up-stagger.visible > *:nth-child(5) { transition-delay: 0.25s; }
+.fade-up-stagger.visible > *:nth-child(6) { transition-delay: 0.3s; }
+
+.fade-up-stagger.visible > * {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ===== Reduced Motion ===== */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  .fade-up,
+  .fade-up-stagger > * {
+    opacity: 1;
+    transform: none;
+  }
+
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+/* ===== Keyframe Animations ===== */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-12px);
+  }
+}
+
+@keyframes floatSlow {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-8px) rotate(2deg);
+  }
+}
+
+@keyframes birdFly {
+  0%, 100% {
+    transform: translateX(0) translateY(0);
+  }
+  25% {
+    transform: translateX(8px) translateY(-4px);
+  }
+  50% {
+    transform: translateX(15px) translateY(-2px);
+  }
+  75% {
+    transform: translateX(8px) translateY(-6px);
+  }
+}
+
+@keyframes cloudDrift {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(20px);
+  }
+}
+
+/* ===== Responsive Typography ===== */
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 1.6rem;
+  }
+  .section-subtitle {
+    font-size: 0.9rem;
+    margin-bottom: 28px;
+  }
+}
