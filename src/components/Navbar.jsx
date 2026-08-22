@@ -6,7 +6,18 @@ const NAV_LINKS = [
   { label: 'About', href: '#about' },
   { label: 'Course', href: '#learning-path' },
   { label: 'Timeline', href: '#timeline' },
-  { label: 'Showcase', href: '#benefit', isDropdown: true },
+  { 
+    label: 'Showcase', 
+    href: '#benefit', 
+    isDropdown: true,
+    dropdownItems: [
+      { label: 'Best Student', href: '#best-student' },
+      { label: 'After Movie', href: '#after-movie' },
+      { label: 'Awarding', href: '#awarding' },
+      { label: 'Media Partner', href: '#media-partner' },
+      { label: 'Kunjungi Kami', href: '#kunjungi-kami' }
+    ]
+  },
   { label: 'FAQ', href: '#faq' },
 ];
 
@@ -35,14 +46,33 @@ export default function Navbar() {
 
         <div className={`navbar__links ${isMobileOpen ? 'navbar__links--open' : ''}`}>
           {NAV_LINKS.map((link) => (
-            <a
-              key={link.href}
-              href={link.href}
-              className={`navbar__link ${link.isDropdown ? 'navbar__link--dropdown' : ''}`}
-              onClick={handleLinkClick}
-            >
-              {link.label}
-            </a>
+            link.isDropdown ? (
+              <div className="navbar__dropdown-container" key={link.href}>
+                <a
+                  href={link.href}
+                  className="navbar__link navbar__link--dropdown"
+                  onClick={handleLinkClick}
+                >
+                  {link.label}
+                </a>
+                <div className="navbar__dropdown-menu">
+                  {link.dropdownItems.map(item => (
+                    <a key={item.href} href={item.href} className="navbar__dropdown-item" onClick={handleLinkClick}>
+                      {item.label}
+                    </a>
+                  ))}
+                </div>
+              </div>
+            ) : (
+              <a
+                key={link.href}
+                href={link.href}
+                className="navbar__link"
+                onClick={handleLinkClick}
+              >
+                {link.label}
+              </a>
+            )
           ))}
           <a href="#home" className="navbar__cta" onClick={handleLinkClick}>Daftar</a>
         </div>

@@ -22,7 +22,7 @@ export default function Timeline() {
 
   return (
     <section className="timeline" id="timeline" ref={ref}>
-      <OceanDecorations bubbleCount={7} fishCount={2} waveTop={25} />
+      <OceanDecorations bubbleCount={7} fishCount={2} waveTop={25} showShip={true} showCastle={true} />
       
       <div className="timeline__birds">
         <img src="/assets/burung.png" alt="" className="timeline__bird timeline__bird--1" aria-hidden="true" />

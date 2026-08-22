@@ -140,21 +140,26 @@
 .timeline__character {
   position: absolute;
   top: 50%;
-  right: -50px;
+  right: -180px;
   transform: translateY(-50%);
   z-index: 1;
 }
 
 .timeline__character img {
-  width: 250px;
+  width: 380px;
   animation: floatSlow 5s ease-in-out infinite;
   filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.3));
 }
 
 /* ===== Responsive ===== */
+@media (max-width: 1200px) {
+  .timeline__character { right: -100px; }
+  .timeline__character img { width: 280px; }
+}
+
 @media (max-width: 1024px) {
-  .timeline__character img { width: 180px; }
-  .timeline__character { right: -20px; }
+  .timeline__character img { width: 200px; }
+  .timeline__character { right: -50px; }
 }
 
 @media (max-width: 768px) {

@@ -196,66 +196,24 @@
   pointer-events: none;
 }
 
-/* --- Back layer: largest clouds, slightly transparent --- */
-.hero__cloud--back-left {
-  bottom: 20px;
-  left: -12%;
-  width: 65%;
-  max-width: 850px;
-  z-index: 4;
-  opacity: 0.7;
-  transform: rotate(-3deg);
-}
-
-.hero__cloud--back-right {
-  bottom: 20px;
-  right: -12%;
-  width: 65%;
-  max-width: 850px;
-  z-index: 4;
-  opacity: 0.7;
-  transform: scaleX(-1) rotate(-3deg);
-}
-
-/* --- Main layer: most visible, prominent clouds --- */
+/* --- Main layer: clean, non-overlapping clouds --- */
 .hero__cloud--main-left {
-  bottom: -5px;
-  left: -8%;
-  width: 58%;
-  max-width: 780px;
+  bottom: 40px;
+  left: -2%;
+  width: 55%;
+  max-width: 700px;
   z-index: 6;
   opacity: 1;
 }
 
 .hero__cloud--main-right {
-  bottom: -5px;
-  right: -8%;
-  width: 58%;
-  max-width: 780px;
+  bottom: 40px;
+  right: -2%;
+  width: 55%;
+  max-width: 700px;
   z-index: 6;
   opacity: 1;
   transform: scaleX(-1);
-}
-
-/* --- Front layer: smaller wisps on top --- */
-.hero__cloud--front-left {
-  bottom: 30px;
-  left: -3%;
-  width: 42%;
-  max-width: 560px;
-  z-index: 8;
-  opacity: 0.85;
-  transform: rotate(5deg) scale(0.8);
-}
-
-.hero__cloud--front-right {
-  bottom: 30px;
-  right: -3%;
-  width: 42%;
-  max-width: 560px;
-  z-index: 8;
-  opacity: 0.85;
-  transform: scaleX(-1) rotate(5deg) scale(0.8);
 }
 
 /* ===== Glow behind mascot ===== */
@@ -283,7 +241,7 @@
   display: flex;
   justify-content: center;
   align-items: flex-end;
-  margin-bottom: -5px;
+  margin-bottom: -40px;
 }
 
 .hero__character img {
@@ -307,12 +265,8 @@
   .hero__desc { font-size: 0.95rem; }
   .hero__character img { width: 220px; }
   .hero__bottom-scene { height: 300px; }
-  .hero__cloud--back-left,
-  .hero__cloud--back-right { width: 60%; }
   .hero__cloud--main-left,
   .hero__cloud--main-right { width: 55%; }
-  .hero__cloud--front-left,
-  .hero__cloud--front-right { width: 40%; }
 }
 
 @media (max-width: 768px) {
@@ -324,12 +278,8 @@
   .hero__actions { gap: 16px; }
   .hero__character img { width: 180px; }
   .hero__bottom-scene { height: 250px; margin-top: 16px; }
-  .hero__cloud--back-left,
-  .hero__cloud--back-right { width: 65%; }
   .hero__cloud--main-left,
   .hero__cloud--main-right { width: 60%; }
-  .hero__cloud--front-left,
-  .hero__cloud--front-right { width: 45%; }
   .hero__glow { width: 300px; height: 220px; }
   .hero__bird--4,
   .hero__bird--8 { display: none; }

@@ -47,18 +47,9 @@ export default function Hero() {
 
       {/* Bottom scene: layered clouds + mascot */}
       <div className="hero__bottom-scene">
-        {/* Multiple cloud layers for dramatic wave effect */}
-        {/* Layer 1 — back clouds (largest, slight opacity) */}
-        <img src="/assets/awan.png" alt="" className="hero__cloud hero__cloud--back-left" aria-hidden="true" />
-        <img src="/assets/awan.png" alt="" className="hero__cloud hero__cloud--back-right" aria-hidden="true" />
-
-        {/* Layer 2 — main clouds (most prominent) */}
+        {/* Layer 1 — main clouds (clean and spaced out) */}
         <img src="/assets/awan.png" alt="" className="hero__cloud hero__cloud--main-left" aria-hidden="true" />
         <img src="/assets/awan.png" alt="" className="hero__cloud hero__cloud--main-right" aria-hidden="true" />
-
-        {/* Layer 3 — front wisps (smaller, on top) */}
-        <img src="/assets/awan.png" alt="" className="hero__cloud hero__cloud--front-left" aria-hidden="true" />
-        <img src="/assets/awan.png" alt="" className="hero__cloud hero__cloud--front-right" aria-hidden="true" />
 
         {/* Glow behind mascot */}
         <div className="hero__glow" aria-hidden="true"></div>

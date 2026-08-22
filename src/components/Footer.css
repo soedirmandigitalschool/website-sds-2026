@@ -25,6 +25,22 @@
 .footer__bird--1 { top: 20%; left: 10%; width: 30px; }
 .footer__bird--2 { top: 30%; right: 15%; width: 20px; animation-delay: -3s; }
 
+.footer__sunset {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 600px;
+  height: 300px;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.footer__sunset svg {
+  width: 100%;
+  height: 100%;
+}
+
 .footer__ship {
   position: absolute;
   top: 20px;
@@ -58,8 +74,9 @@
 }
 
 .footer__logo {
-  width: 50px;
   height: 50px;
+  width: auto;
+  object-fit: contain;
 }
 
 .footer__brand-name {

@@ -111,6 +111,40 @@
   overflow: hidden;
 }
 
+/* Background Elements */
+.ocean-element {
+  position: absolute;
+  pointer-events: none;
+  z-index: 1;
+  color: var(--color-white);
+}
+
+.ocean-element img {
+  max-width: 300px;
+}
+
+.ocean-ship {
+  position: absolute;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.ocean-ship img {
+  max-width: 400px;
+}
+
+.ocean-coral {
+  width: 100px;
+  height: 100px;
+  animation: coralSway 8s ease-in-out infinite;
+  transform-origin: bottom center;
+}
+
+@keyframes coralSway {
+  0%, 100% { transform: rotate(0deg) scale(var(--scale, 1)); }
+  50% { transform: rotate(5deg) scale(var(--scale, 1)); }
+}
+
 /* Reduced Motion */
 @media (prefers-reduced-motion: reduce) {
   .ocean-bubble,

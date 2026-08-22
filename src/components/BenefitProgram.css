@@ -36,6 +36,11 @@
   object-fit: cover;
 }
 
+.benefit-card--certificate .benefit__card-image img,
+.benefit-card--lms .benefit__card-image img {
+  object-position: top center;
+}
+
 .benefit__card-overlay {
   position: absolute;
   inset: 0;

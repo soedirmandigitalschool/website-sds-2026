@@ -52,7 +52,7 @@ export default function FAQ() {
 
   return (
     <section className="faq" id="faq" ref={ref}>
-      <OceanDecorations bubbleCount={3} fishCount={1} waveTop={10} />
+      <OceanDecorations bubbleCount={3} fishCount={1} waveTop={10} showCastle={true} />
       <div className={`container fade-up ${isInView ? 'visible' : ''}`}>
         <h2 className="section-title">NEED HELP?</h2>
 

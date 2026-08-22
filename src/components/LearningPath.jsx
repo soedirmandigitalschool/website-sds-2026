@@ -44,7 +44,7 @@ export default function LearningPath() {
 
   return (
     <section className="learning-path" id="learning-path" ref={ref}>
-      <OceanDecorations bubbleCount={5} fishCount={1} waveTop={15} />
+      <OceanDecorations bubbleCount={5} fishCount={3} waveTop={15} showPalmTree={true} />
       <div className={`container fade-up ${isInView ? 'visible' : ''}`}>
         <h2 className="section-title">LEARNING PATH</h2>
         <p className="section-subtitle">

@@ -7,6 +7,7 @@ const BENEFITS = [
     title: 'E-Certificate',
     desc: 'Dapat sertifikat sebagai bentuk apresiasi atas partisipasi dan penyelesaian rangkaian bootcamp Soedirman Digital School.',
     image: '/assets/1.jpg',
+    className: 'benefit-card--certificate',
   },
   {
     title: '2 Bulan Pelatihan',
@@ -22,16 +23,17 @@ const BENEFITS = [
     title: 'LMS khusus',
     desc: 'Pembelajaran dapat dilacak dan dipantau melalui platform Moodle.',
     image: '/assets/4.jpg',
+    className: 'benefit-card--lms',
   },
   {
     title: 'Talkshow',
     desc: 'Memberikan wawasan dan ruang diskusi mengenai tren, kreativitas, serta perkembangan konten diberbagai platform digital.',
-    image: '/assets/1.jpg',
+    image: '/assets/data anaylst.jpg',
   },
   {
     title: 'Memperluas Networking',
     desc: 'Bertemu dengan berbagai macam orang hebat dan dari berbagai latar belakang untuk saling berkolaborasi.',
-    image: '/assets/2.jpg',
+    image: '/assets/social media specialist.jpg',
   },
 ];
 
@@ -40,12 +42,12 @@ export default function BenefitProgram() {
 
   return (
     <section className="benefit" id="benefit" ref={ref}>
-      <OceanDecorations bubbleCount={6} fishCount={2} waveTop={30} />
+      <OceanDecorations bubbleCount={6} fishCount={2} waveTop={30} showCoral={true} />
       <div className={`container fade-up ${isInView ? 'visible' : ''}`}>
         <h2 className="section-title">BENEFIT PROGRAM</h2>
         <div className="benefit__grid fade-up-stagger visible">
           {BENEFITS.map((benefit, i) => (
-            <div className="benefit__card" key={i}>
+            <div className={`benefit__card ${benefit.className || ''}`} key={i}>
               <div className="benefit__card-image">
                 <img src={benefit.image} alt={benefit.title} loading="lazy" />
                 <div className="benefit__card-overlay">
