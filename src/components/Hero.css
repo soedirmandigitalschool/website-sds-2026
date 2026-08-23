@@ -179,7 +179,7 @@
   position: relative;
   width: 100%;
   z-index: 5;
-  margin-top: 40px;
+  margin-top: 100px; /* Increased space to prevent overlap with buttons */
   height: 450px; /* Space for the waves and mascot */
   display: flex;
   align-items: flex-end;
@@ -230,7 +230,7 @@
   display: flex;
   justify-content: center;
   align-items: flex-end;
-  margin-bottom: -35px; /* Push mascot down slightly, but not too far */
+  margin-bottom: -50px; /* Push mascot down slightly */
 }
 
 .hero__character img {
@@ -263,9 +263,9 @@
   .hero__desc { font-size: 0.85rem; margin-bottom: 20px; max-width: 90%; }
   .hero__btn { font-size: 0.85rem; padding: 12px 30px; }
   .hero__actions { gap: 16px; }
-  .hero__character { margin-bottom: -15px; }
+  .hero__character { margin-bottom: -25px; }
   .hero__character img { width: 180px; }
-  .hero__bottom-scene { height: 280px; margin-top: 16px; }
+  .hero__bottom-scene { height: 280px; margin-top: 40px; }
   .hero__glow { width: 300px; height: 220px; }
   .hero__bird--4,
   .hero__bird--8 { display: none; }
@@ -277,8 +277,8 @@
   .hero__subtitle { font-size: 0.9rem; }
   .hero__desc { font-size: 0.8rem; }
   .hero__btn { font-size: 0.8rem; padding: 10px 24px; }
-  .hero__character { margin-bottom: -5px; }
+  .hero__character { margin-bottom: -15px; }
   .hero__character img { width: 150px; }
-  .hero__bottom-scene { height: 200px; }
+  .hero__bottom-scene { height: 200px; margin-top: 30px; }
   .hero__glow { width: 220px; height: 160px; }
 }
