@@ -58,9 +58,7 @@ export default function Hero() {
               </filter>
             </defs>
 
-            {/* Back White Layer */}
-            <path fill="#ffffff" d="M0,80 C200,100 350,220 500,280 C600,320 650,380 720,380 C790,380 840,320 940,280 C1090,220 1240,100 1440,80 L1440,450 L0,450 Z" />
-            
+
             {/* Middle Teal/Shadow Layer */}
             <path fill="#157c91" filter="url(#wave-glow)" d="M0,150 C250,180 380,280 520,340 C620,380 670,420 720,420 C770,420 820,380 920,340 C1060,280 1190,180 1440,150 L1440,450 L0,450 Z" />
             
