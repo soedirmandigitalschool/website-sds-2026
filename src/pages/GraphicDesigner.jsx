@@ -38,7 +38,7 @@ export default function GraphicDesigner() {
           
           <div className={`gd-action fade-up ${isLoaded ? 'visible' : ''}`} style={{transitionDelay: '0.1s'}}>
             <a href="http://bem-unsoed.com/OpenBootcampSDS2026" target="_blank" rel="noopener noreferrer" className="gd-btn">
-              Daftar Sekarang <span>&#8599;</span>
+              Daftar Sekarang <img src="/assets/panah/Vector 1.png" alt="" />
             </a>
           </div>
         </section>

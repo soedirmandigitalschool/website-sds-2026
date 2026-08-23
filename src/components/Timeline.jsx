@@ -3,18 +3,18 @@ import { OceanDecorations } from './Decorations';
 import './Timeline.css';
 
 const TIMELINE_DATA = [
-  { date: '12 - 21 Agustus', title: 'Open Registration Internal', side: 'left' },
-  { date: '22 Agustus', title: 'Webinar', side: 'right' },
-  { date: '24 - 26 Agustus', title: 'Open Registration Umum', side: 'left' },
-  { date: '28 - 29 Agustus', title: 'Pretest', side: 'right' },
-  { date: '29 - 30 Agustus', title: 'Pre-Test', side: 'left' },
-  { date: '4 September', title: 'Announcement', side: 'right' },
-  { date: '8 September', title: 'On Boarding', side: 'left' },
-  { date: '12-14, 19-20, 26-27\nSeptember dan 3-4 Oktober', title: 'Bootcamp', side: 'right' },
-  { date: '27 September', title: 'Mid-test', side: 'left' },
-  { date: '12 - 21 Agustus', title: 'Final Project', side: 'right' },
-  { date: '19 Oktober', title: 'Deadline', side: 'left' },
-  { date: '24 Oktober', title: 'Graduation', side: 'right' },
+  { date: '12 - 21 Agustus 2026', title: 'Open Registration Internal', side: 'left' },
+  { date: '22 Agustus 2026', title: 'Webinar', side: 'right' },
+  { date: '24 - 26 Agustus 2026', title: 'Open Registration Umum', side: 'left' },
+  { date: '28 - 29 Agustus 2026', title: 'Pretest', side: 'right' },
+  { date: '29 - 30 Agustus 2026', title: 'Pre-Test', side: 'left' },
+  { date: '4 September 2026', title: 'Announcement', side: 'right' },
+  { date: '8 September 2026', title: 'On Boarding', side: 'left' },
+  { date: '12-14, 19-20, 26-27\nSeptember dan 3-4 Oktober 2026', title: 'Bootcamp', side: 'right' },
+  { date: '27 September 2026', title: 'Mid-test', side: 'left' },
+  { date: '12 - 21 Agustus 2026', title: 'Final Project', side: 'right' },
+  { date: '19 Oktober 2026', title: 'Deadline', side: 'left' },
+  { date: '24 Oktober 2026', title: 'Graduation', side: 'right' },
 ];
 
 export default function Timeline() {
