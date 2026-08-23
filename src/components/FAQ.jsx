@@ -6,19 +6,19 @@ import './FAQ.css';
 const FAQ_DATA = [
   {
     question: 'Apa itu Soedirman Digital School?',
-    answer: 'Soedirman Digital School (SDS) adalah program pelatihan digital yang diselenggarakan oleh BEM UNSOED untuk membantu mahasiswa dan umum dalam mengembangkan keterampilan digital di era industri 4.0.',
+    answer: 'Soedirman Digital School (SDS) merupakan program pengembangan keterampilan digital yang menyediakan pembelajaran dalam tiga bidang, yaitu Social Media Specialist, Data Analyst, dan Graphic Design.',
   },
   {
     question: 'Siapa saja yang dapat mengikuti Soedirman Digital School?',
-    answer: 'Program ini terbuka untuk mahasiswa aktif S1/Vokasi Universitas Jenderal Soedirman serta terbuka untuk umum. Semua orang yang memiliki minat dalam pengembangan keterampilan digital dapat mendaftar.',
+    answer: 'SDS 2026 terbuka untuk mahasiswa Universitas Jenderal Soedirman dan masyarakat umum yang ingin mengembangkan keterampilan di bidang digital.',
   },
   {
     question: 'Berapa biaya untuk mengikuti Soedirman Digital School?',
-    answer: 'Informasi mengenai biaya pendaftaran dan program dapat dilihat pada guidebook yang tersedia. Silakan unduh guidebook melalui tombol GUIDEBOOK di halaman utama untuk informasi lebih lengkap.',
+    answer: 'Biaya pendaftaran SDS 2026 adalah Rp125.000 untuk peserta umum. Untuk Mahasiswa Unsoed, gratis atau tidak dikenakan biaya.',
   },
   {
     question: 'Bagaimana sistem pembelajaran di Soedirman Digital School?',
-    answer: 'Pembelajaran dilakukan melalui Learning Management System (LMS) khusus yang telah dirancang untuk pengalaman belajar yang terstruktur.',
+    answer: 'Peserta akan mengikuti rangkaian pembelajaran sesuai course yang dipilih, mulai dari penyampaian materi hingga praktik dan proyek yang dirancang untuk mengembangkan keterampilan digital secara aplikatif.',
   },
 ];
 

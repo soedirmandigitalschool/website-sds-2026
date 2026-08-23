@@ -12,11 +12,11 @@ const NAV_LINKS = [
     href: '#', 
     isDropdown: true,
     dropdownItems: [
-      { label: 'Best Student', href: '/coming-soon' },
+      { label: 'Best Student', href: '/best-student' },
       { label: 'After Movie', href: '/coming-soon' },
       { label: 'Awarding', href: '/awarding' },
-      { label: 'Media Partner', href: '/coming-soon' },
-      { label: 'Kunjungi Kami', href: '/coming-soon' }
+      { label: 'Media Partner', href: '/#media-partner' },
+      { label: 'Kunjungi Kami', href: 'https://www.instagram.com/soedirman.digital.school?igsi=bGNkY3dmc290MXJj' }
     ]
   },
   { label: 'FAQ', href: '/#faq' },
@@ -58,9 +58,15 @@ export default function Navbar() {
                 </a>
                 <div className="navbar__dropdown-menu">
                   {link.dropdownItems.map(item => (
-                    <Link key={item.href} to={item.href} className="navbar__dropdown-item" onClick={handleLinkClick}>
-                      {item.label}
-                    </Link>
+                    item.href.startsWith('http') ? (
+                      <a key={item.href} href={item.href} target="_blank" rel="noopener noreferrer" className="navbar__dropdown-item" onClick={handleLinkClick}>
+                        {item.label}
+                      </a>
+                    ) : (
+                      <Link key={item.href} to={item.href} className="navbar__dropdown-item" onClick={handleLinkClick}>
+                        {item.label}
+                      </Link>
+                    )
                   ))}
                 </div>
               </div>
@@ -75,7 +81,7 @@ export default function Navbar() {
               </Link>
             )
           ))}
-          <Link to="/#home" className="navbar__cta" onClick={handleLinkClick}>Daftar</Link>
+          <a href="http://bem-unsoed.com/OpenBootcampSDS2026" target="_blank" rel="noopener noreferrer" className="navbar__cta" onClick={handleLinkClick}>Daftar</a>
         </div>
 
         <button

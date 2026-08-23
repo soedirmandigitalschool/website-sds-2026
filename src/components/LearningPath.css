@@ -12,6 +12,11 @@
   margin: 0 auto;
 }
 
+.learning-path .container {
+  position: relative;
+  z-index: 2;
+}
+
 .learning-path__wrapper {
   display: flex;
   flex-direction: column;

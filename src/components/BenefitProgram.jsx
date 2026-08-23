@@ -22,18 +22,18 @@ const BENEFITS = [
   {
     title: 'LMS khusus',
     desc: 'Pembelajaran dapat dilacak dan dipantau melalui platform Moodle.',
-    image: '/assets/4.jpg',
+    image: '/assets/lms.jpg',
     className: 'benefit-card--lms',
   },
   {
     title: 'Talkshow',
     desc: 'Memberikan wawasan dan ruang diskusi mengenai tren, kreativitas, serta perkembangan konten diberbagai platform digital.',
-    image: '/assets/data anaylst.jpg',
+    image: '/assets/4.jpg',
   },
   {
     title: 'Memperluas Networking',
     desc: 'Bertemu dengan berbagai macam orang hebat dan dari berbagai latar belakang untuk saling berkolaborasi.',
-    image: '/assets/social media specialist.jpg',
+    image: '/assets/networking.jpg',
   },
 ];
 

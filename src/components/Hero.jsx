@@ -40,21 +40,39 @@ export default function Hero() {
           yourself for the future with Soedirman Digital School.
         </p>
         <div className="hero__actions">
-          <a href="#" className="hero__btn hero__btn--primary">Daftar</a>
-          <a href="#" className="hero__btn hero__btn--secondary">GUIDEBOOK</a>
+          <a href="http://bem-unsoed.com/OpenBootcampSDS2026" target="_blank" rel="noopener noreferrer" className="hero__btn hero__btn--primary">Daftar</a>
+          <a href="https://drive.google.com/file/d/1nmdesgmCBE3EJIAOdsU82bOr7MlcJ6xQ/view?usp=sharing" target="_blank" rel="noopener noreferrer" className="hero__btn hero__btn--secondary">GUIDEBOOK</a>
         </div>
       </div>
 
-      {/* Bottom scene: layered clouds + mascot */}
+      {/* Bottom scene: layered vector waves + mascot */}
       <div className="hero__bottom-scene">
-        {/* Layer 1 — main clouds (clean and spaced out) */}
-        <img src="/assets/awan.png" alt="" className="hero__cloud hero__cloud--main-left" aria-hidden="true" />
-        <img src="/assets/awan.png" alt="" className="hero__cloud hero__cloud--main-right" aria-hidden="true" />
+        
+        {/* SVG Waves Background */}
+        <div className="hero__waves-container">
+          <svg className="hero__waves-svg" viewBox="0 0 1440 450" preserveAspectRatio="none">
+            <defs>
+              <filter id="wave-glow" x="-20%" y="-20%" width="140%" height="140%">
+                <feGaussianBlur stdDeviation="15" result="blur" />
+                <feComposite in="SourceGraphic" in2="blur" operator="over" />
+              </filter>
+            </defs>
+
+            {/* Back White Layer */}
+            <path fill="#ffffff" d="M0,80 C200,100 350,220 500,280 C600,320 650,380 720,380 C790,380 840,320 940,280 C1090,220 1240,100 1440,80 L1440,450 L0,450 Z" />
+            
+            {/* Middle Teal/Shadow Layer */}
+            <path fill="#157c91" filter="url(#wave-glow)" d="M0,150 C250,180 380,280 520,340 C620,380 670,420 720,420 C770,420 820,380 920,340 C1060,280 1190,180 1440,150 L1440,450 L0,450 Z" />
+            
+            {/* Front White Layer */}
+            <path fill="#ffffff" d="M0,230 C280,260 400,340 540,390 C630,420 680,450 720,450 C760,450 810,420 900,390 C1040,340 1160,260 1440,230 L1440,450 L0,450 Z" />
+          </svg>
+        </div>
 
         {/* Glow behind mascot */}
         <div className="hero__glow" aria-hidden="true"></div>
 
-        {/* Mascot centered between clouds */}
+        {/* Mascot centered in the valley */}
         <div className={`hero__character fade-up ${isLoaded ? 'visible' : ''}`} style={{transitionDelay: '0.3s'}}>
           <img src="/assets/MASKOT FIN.png" alt="SDS Pirate Mascot" />
         </div>

@@ -4,7 +4,8 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  overflow: hidden;
+  overflow-x: clip;
+  overflow-y: visible;
   padding: 130px 0 0;
   /* Full background — deep teal matching reference */
   background: linear-gradient(
@@ -103,17 +104,11 @@
 .hero__title {
   font-family: var(--font-cutenes);
   font-size: 5.5rem;
-  color: var(--color-white);
+  color: #ffffff; /* Full white fill */
   margin-bottom: 14px;
-  letter-spacing: 3px;
-  -webkit-text-stroke: 2px var(--color-white);
-  text-shadow:
-    -2px -2px 0 var(--color-deep-blue),
-    2px -2px 0 var(--color-deep-blue),
-    -2px 2px 0 var(--color-deep-blue),
-    2px 2px 0 var(--color-deep-blue),
-    4px 4px 0 var(--color-deep-blue),
-    0 0 20px rgba(255, 255, 255, 0.3);
+  letter-spacing: 2px;
+  -webkit-text-stroke: 0; /* Remove outline */
+  text-shadow: 0 0 20px rgba(255, 255, 255, 0.6), 0 4px 10px rgba(0, 0, 0, 0.2); /* White glow effect + soft drop shadow */
   line-height: 1.05;
   text-transform: uppercase;
 }
@@ -123,24 +118,22 @@
   font-size: 1.35rem;
   color: var(--color-white);
   margin-bottom: 10px;
-  font-weight: 700;
+  font-weight: 800;
   letter-spacing: 0.5px;
-  text-shadow: 1px 1px 3px rgba(0,0,0,0.4);
 }
 
 .hero__desc {
   font-size: 1rem;
-  color: rgba(255, 255, 255, 0.9);
-  max-width: 560px;
+  color: var(--color-white);
+  max-width: 580px;
   margin: 0 auto 28px;
   line-height: 1.55;
   font-weight: 400;
-  text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
 }
 
 .hero__actions {
   display: flex;
-  gap: 28px;
+  gap: 20px; /* Closer together like reference */
   justify-content: center;
 }
 
@@ -148,34 +141,37 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.1rem;
-  font-weight: 700;
-  padding: 14px 52px;
-  border-radius: var(--radius-pill);
-  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
-  letter-spacing: 0.5px;
+  font-size: 1rem;
+  font-weight: 800;
+  padding: 14px 44px;
+  border-radius: 40px;
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast), background-color var(--transition-fast);
+  letter-spacing: 1px;
+  text-transform: uppercase;
 }
 
 .hero__btn--primary {
-  background: #0c3d5f;
+  background: #084b66; /* Deep teal matching reference */
   color: var(--color-white);
-  border: 2px solid #0c3d5f;
+  border: 2px solid #084b66;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
 }
 
 .hero__btn--primary:hover {
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(12, 61, 95, 0.5);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.3);
 }
 
 .hero__btn--secondary {
-  background: #0c3d5f;
+  background: #084b66;
   color: var(--color-white);
-  border: 2px solid #0c3d5f;
+  border: 2px solid #084b66;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
 }
 
 .hero__btn--secondary:hover {
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(12, 61, 95, 0.5);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.3);
 }
 
 /* ===== Bottom scene: multi-layered clouds + mascot ===== */
@@ -183,37 +179,30 @@
   position: relative;
   width: 100%;
   z-index: 5;
-  margin-top: 24px;
-  height: 420px;
+  margin-top: 40px;
+  height: 450px; /* Space for the waves and mascot */
   display: flex;
   align-items: flex-end;
   justify-content: center;
 }
 
-/* ===== Cloud layers ===== */
-.hero__cloud {
+/* ===== Vector Waves Container ===== */
+.hero__waves-container {
   position: absolute;
+  bottom: -2px; /* Fix any gap at the bottom */
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 4;
   pointer-events: none;
+  display: flex;
+  align-items: flex-end;
 }
 
-/* --- Main layer: clean, non-overlapping clouds --- */
-.hero__cloud--main-left {
-  bottom: 40px;
-  left: -2%;
-  width: 55%;
-  max-width: 700px;
-  z-index: 6;
-  opacity: 1;
-}
-
-.hero__cloud--main-right {
-  bottom: 40px;
-  right: -2%;
-  width: 55%;
-  max-width: 700px;
-  z-index: 6;
-  opacity: 1;
-  transform: scaleX(-1);
+.hero__waves-svg {
+  width: 100%;
+  height: 100%;
+  min-height: 250px;
 }
 
 /* ===== Glow behind mascot ===== */
@@ -234,14 +223,14 @@
   pointer-events: none;
 }
 
-/* ===== Character — centered between clouds ===== */
+/* ===== Character — centered between waves ===== */
 .hero__character {
   position: relative;
   z-index: 7;
   display: flex;
   justify-content: center;
   align-items: flex-end;
-  margin-bottom: -40px;
+  margin-bottom: -10px; /* Slight overlap with the bottom edge */
 }
 
 .hero__character img {
@@ -254,7 +243,7 @@
 /* ===== Responsive ===== */
 @media (max-width: 1200px) {
   .hero__title { font-size: 4.5rem; }
-  .hero__bottom-scene { height: 360px; }
+  .hero__bottom-scene { height: 400px; }
   .hero__character img { width: 250px; }
 }
 
@@ -264,22 +253,18 @@
   .hero__subtitle { font-size: 1.15rem; }
   .hero__desc { font-size: 0.95rem; }
   .hero__character img { width: 220px; }
-  .hero__bottom-scene { height: 300px; }
-  .hero__cloud--main-left,
-  .hero__cloud--main-right { width: 55%; }
+  .hero__bottom-scene { height: 350px; }
 }
 
 @media (max-width: 768px) {
   .hero { padding-top: 100px; }
-  .hero__title { font-size: 2.4rem; letter-spacing: 1px; }
+  .hero__title { font-size: 2.4rem; letter-spacing: 1px; -webkit-text-stroke: 2px var(--color-white); }
   .hero__subtitle { font-size: 1rem; }
   .hero__desc { font-size: 0.85rem; margin-bottom: 20px; max-width: 90%; }
-  .hero__btn { font-size: 0.9rem; padding: 12px 30px; }
+  .hero__btn { font-size: 0.85rem; padding: 12px 30px; }
   .hero__actions { gap: 16px; }
   .hero__character img { width: 180px; }
-  .hero__bottom-scene { height: 250px; margin-top: 16px; }
-  .hero__cloud--main-left,
-  .hero__cloud--main-right { width: 60%; }
+  .hero__bottom-scene { height: 280px; margin-top: 16px; }
   .hero__glow { width: 300px; height: 220px; }
   .hero__bird--4,
   .hero__bird--8 { display: none; }
@@ -287,7 +272,7 @@
 
 @media (max-width: 480px) {
   .hero { padding-top: 90px; }
-  .hero__title { font-size: 1.8rem; }
+  .hero__title { font-size: 1.8rem; -webkit-text-stroke: 1.5px var(--color-white); }
   .hero__subtitle { font-size: 0.9rem; }
   .hero__desc { font-size: 0.8rem; }
   .hero__btn { font-size: 0.8rem; padding: 10px 24px; }

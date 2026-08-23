@@ -61,7 +61,7 @@ export default function CourseSyllabus() {
       <div className="course-hero container">
         <h1 className="course-hero__title">{course.title}</h1>
         <p className="course-hero__desc">{course.desc}</p>
-        <a href="#register" className="course-hero__btn">Daftar Sekarang <span>↗</span></a>
+        <a href="http://bem-unsoed.com/OpenBootcampSDS2026" target="_blank" rel="noopener noreferrer" className="course-hero__btn">Daftar Sekarang <span>↗</span></a>
       </div>
 
       <div className="course-syllabus container">

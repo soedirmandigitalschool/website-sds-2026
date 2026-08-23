@@ -123,8 +123,17 @@ export function OceanDecorations({ bubbleCount = 5, fishCount = 4, waveTop = 20,
       )}
       {showPalmTree && (
         <>
-          <PalmTree bottom={-10} left={-5} opacity={0.2} scale={1.2} />
-          <PalmTree bottom={-5} right={-5} opacity={0.15} scale={0.8} />
+          {/* Left grove */}
+          <PalmTree bottom={-15} left={-10} opacity={0.12} scale={1.8} />
+          <PalmTree bottom={-5} left={-2} opacity={0.15} scale={1.2} />
+          <PalmTree bottom={5} left={8} opacity={0.1} scale={0.8} />
+          <PalmTree bottom={15} left={-5} opacity={0.08} scale={1.5} />
+          
+          {/* Right grove */}
+          <PalmTree bottom={-20} right={-15} opacity={0.1} scale={2} />
+          <PalmTree bottom={-5} right={-2} opacity={0.15} scale={1.1} />
+          <PalmTree bottom={10} right={5} opacity={0.12} scale={1.3} />
+          <PalmTree bottom={25} right={-8} opacity={0.08} scale={1.6} />
         </>
       )}
       {showSunset && <Sunset bottom={10} left={40} opacity={0.3} scale={3} />}

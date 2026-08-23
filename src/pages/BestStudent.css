@@ -1,5 +1,5 @@
-/* ===== Coming Soon Page ===== */
-.coming-soon-page {
+/* ===== Best Student Page ===== */
+.best-student-page {
   width: 100%;
   min-height: 100vh;
   margin: 0;
@@ -7,7 +7,7 @@
   flex-direction: column;
 }
 
-.cs-main-container {
+.bs-main-container {
   flex: 1;
   position: relative;
   width: 100%;
@@ -18,15 +18,15 @@
   padding-top: 80px; /* Space for navbar */
 }
 
-.cs-cloud,
-.cs-wave,
-.cs-sun,
-.cs-ship {
+.bs-cloud,
+.bs-wave,
+.bs-sun,
+.bs-ship {
   position: absolute;
   pointer-events: none;
 }
 
-.cs-cloud {
+.bs-cloud {
   z-index: 1;
   background-position: center;
   background-repeat: no-repeat;
@@ -34,26 +34,26 @@
   opacity: 0.25;
 }
 
-.cs-cloud-top-left,
-.cs-cloud-top-right {
+.bs-cloud-top-left,
+.bs-cloud-top-right {
   top: 15%;
   width: clamp(180px, 21vw, 300px);
   height: clamp(130px, 22vw, 320px);
   background-image: url("/assets/Vector 1822.png");
 }
 
-.cs-cloud-top-left {
+.bs-cloud-top-left {
   left: 10.5%;
 }
 
-.cs-cloud-top-right {
+.bs-cloud-top-right {
   right: 10.5%;
   background-image: url("/assets/Vector 365.png");
   transform: scaleX(-1);
 }
 
-.cs-cloud-middle-left,
-.cs-cloud-middle-right {
+.bs-cloud-middle-left,
+.bs-cloud-middle-right {
   top: 30%;
   width: clamp(220px, 31vw, 420px);
   height: clamp(90px, 15vw, 200px);
@@ -61,18 +61,18 @@
   opacity: 0.2;
 }
 
-.cs-cloud-middle-left {
+.bs-cloud-middle-left {
   left: -1%;
 }
 
-.cs-cloud-middle-right {
+.bs-cloud-middle-right {
   right: -1%;
   background-image: url("/assets/Vector 364.png");
   transform: scaleX(-1);
 }
 
-.cs-cloud-low-left,
-.cs-cloud-low-right {
+.bs-cloud-low-left,
+.bs-cloud-low-right {
   top: 55%;
   width: clamp(150px, 19vw, 280px);
   height: clamp(65px, 10vw, 145px);
@@ -80,17 +80,17 @@
   opacity: 0.2;
 }
 
-.cs-cloud-low-left {
+.bs-cloud-low-left {
   left: 2%;
 }
 
-.cs-cloud-low-right {
+.bs-cloud-low-right {
   right: 2%;
   background-image: url("/assets/Vector 366.png");
   transform: scaleX(-1);
 }
 
-.cs-message {
+.bs-message {
   position: absolute;
   z-index: 5;
   top: 40%;
@@ -100,7 +100,7 @@
   transform: translateY(-50%);
 }
 
-.cs-message h1 {
+.bs-message h1 {
   margin: 0;
   color: #004e62;
   font-family: var(--font-cutenes);
@@ -112,7 +112,7 @@
   text-shadow: 0 0 15px rgba(255, 255, 255, 0.8), 0 0 30px rgba(255, 255, 255, 0.6);
 }
 
-.cs-message p {
+.bs-message p {
   margin: clamp(18px, 2vw, 28px) 0 0;
   color: #fff;
   font-family: var(--font-body);
@@ -121,7 +121,7 @@
   line-height: 1.2;
 }
 
-.cs-sun {
+.bs-sun {
   z-index: 2;
   right: 30%;
   bottom: 8%;
@@ -132,7 +132,7 @@
   opacity: 0.28;
 }
 
-.cs-ship {
+.bs-ship {
   z-index: 4;
   bottom: 9%;
   left: 14%;
@@ -141,7 +141,7 @@
   animation: floatSlow 6s ease-in-out infinite;
 }
 
-.cs-wave {
+.bs-wave {
   z-index: 3;
   bottom: -1px;
   left: 0;
@@ -152,31 +152,31 @@
   background-size: 100% 100%;
 }
 
-.cs-wave-back {
+.bs-wave-back {
   background-image: url("/assets/Vector 1819.png");
   opacity: 0.72;
 }
 
-.cs-wave-front {
+.bs-wave-front {
   z-index: 6;
   height: 19%;
   background-image: url("/assets/Vector 1824.png");
 }
 
 @media (max-width: 640px) {
-  .cs-message {
+  .bs-message {
     top: 42%;
   }
 
-  .cs-message h1 {
+  .bs-message h1 {
     font-size: clamp(3rem, 14vw, 6rem);
   }
 
-  .cs-message p {
+  .bs-message p {
     font-size: clamp(0.9rem, 3.5vw, 1.25rem);
   }
 
-  .cs-ship {
+  .bs-ship {
     left: 10%;
     bottom: 10%;
   }

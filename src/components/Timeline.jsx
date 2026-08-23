@@ -31,7 +31,7 @@ export default function Timeline() {
       </div>
 
       <div className={`container fade-up ${isInView ? 'visible' : ''}`}>
-        <h2 className="section-title section-title--dark">TIMELINE</h2>
+        <h2 className="section-title">TIMELINE</h2>
 
         <div className="timeline__track-container">
           <div className="timeline__track">

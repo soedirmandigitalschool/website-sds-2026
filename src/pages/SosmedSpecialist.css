@@ -1,0 +1,254 @@
+/* ===== Sosmed Specialist Page ===== */
+.sosmed-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow-x: hidden;
+  background: #0aa3bf;
+}
+
+.ss-main {
+  flex: 1;
+  padding-top: 150px;
+  position: relative;
+  z-index: 2;
+  padding-bottom: 80px;
+}
+
+/* Decor Background matching index.css */
+.ss-page-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: linear-gradient(180deg, #c8e79a 0%, #8bd5ae 18%, #26b4c1 48%, #0794af 100%);
+  z-index: -3;
+  pointer-events: none;
+}
+
+.ss-background-waves {
+  position: absolute;
+  width: 100%;
+  height: 70%;
+  bottom: 0;
+  left: 0;
+  object-fit: cover;
+  object-position: top center;
+  opacity: 0.95;
+  z-index: -2;
+}
+
+.ss-background-wave-lower {
+  position: absolute;
+  width: 100%;
+  height: 50%;
+  bottom: 0;
+  left: 0;
+  object-fit: cover;
+  object-position: top center;
+  opacity: 0.95;
+  z-index: -1;
+}
+
+.ss-background-tree {
+  position: absolute;
+  width: clamp(250px, 35vw, 450px);
+  height: auto;
+  right: -20px;
+  bottom: -20px;
+  opacity: 0.8;
+  z-index: 0;
+}
+
+.ss-background-birds {
+  position: absolute;
+  width: 130px;
+  height: auto;
+  left: 10%;
+  top: 35%;
+  z-index: 0;
+}
+
+/* Hero Section */
+.ss-hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 60px;
+}
+
+.ss-title {
+  font-family: var(--font-cutenes);
+  font-size: 6rem;
+  color: #ffffff;
+  text-align: center;
+  margin-bottom: 30px;
+  letter-spacing: 2px;
+  -webkit-text-stroke: 0;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.5), 0 2px 10px rgba(0, 0, 0, 0.15);
+}
+
+.ss-description-card {
+  text-align: center;
+  max-width: 950px;
+  margin: 0 auto 40px;
+}
+
+.ss-description-card p {
+  font-size: 1.15rem;
+  color: var(--color-white);
+  line-height: 1.7;
+  opacity: 0.95;
+}
+
+.ss-action {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.ss-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  background-color: #024d60;
+  color: var(--color-white);
+  font-family: var(--font-cutenes);
+  font-size: 1.6rem;
+  padding: 10px 35px;
+  border-radius: 100px;
+  text-decoration: none;
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.ss-btn span {
+  font-family: sans-serif;
+  font-size: 2rem;
+  line-height: 1;
+}
+
+.ss-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* Syllabus Section */
+.ss-syllabus {
+  max-width: 950px;
+  margin: 0 auto;
+}
+
+.ss-syllabus-title {
+  font-size: 2.2rem;
+  color: var(--color-white);
+  margin-bottom: 40px;
+  padding-left: 20px;
+}
+
+.ss-syllabus-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.ss-camp-item {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  position: relative;
+}
+
+.ss-camp-badge {
+  background-color: #024d60;
+  color: var(--color-white);
+  font-size: 1.3rem;
+  font-weight: 700;
+  height: 60px;
+  width: 180px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100px;
+  flex-shrink: 0;
+  box-shadow: 4px 0 15px rgba(0,0,0,0.1);
+}
+
+.ss-camp-content {
+  background-color: var(--color-white);
+  color: #024d60;
+  font-size: 1.25rem;
+  font-weight: 500;
+  height: 60px;
+  display: inline-flex;
+  align-items: center;
+  padding: 0 40px;
+  border-radius: 100px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+.ss-camp-item--test .ss-camp-content {
+  flex-grow: 0;
+  padding-right: 60px;
+}
+
+.ss-camp-item--final .ss-camp-content {
+  flex-grow: 0;
+  padding-right: 60px;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .ss-title {
+    font-size: 4.5rem;
+  }
+  .ss-description-card p {
+    font-size: 1.05rem;
+  }
+  .ss-camp-badge {
+    width: 150px;
+    font-size: 1.1rem;
+  }
+  .ss-camp-content {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .ss-title {
+    font-size: 3.5rem;
+  }
+  .ss-action {
+    justify-content: center;
+  }
+  .ss-btn {
+    font-size: 1.4rem;
+    padding: 10px 30px;
+  }
+  .ss-syllabus-title {
+    text-align: center;
+    padding-left: 0;
+  }
+  .ss-camp-item {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+  }
+  .ss-camp-badge {
+    width: 100%;
+    margin-bottom: 0;
+  }
+  .ss-camp-content {
+    margin-left: 0;
+    padding: 10px 20px;
+    height: auto;
+    min-height: 60px;
+    justify-content: center;
+    text-align: center;
+    line-height: 1.4;
+  }
+}
