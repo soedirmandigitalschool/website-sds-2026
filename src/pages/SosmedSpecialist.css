@@ -162,7 +162,6 @@
 .ss-camp-item {
   display: flex;
   align-items: center;
-  justify-content: center;
   gap: 20px;
   position: relative;
 }
@@ -197,8 +196,15 @@
 }
 
 .ss-camp-item--test .ss-camp-content {
-  flex-grow: 0;
+  flex: 0 0 220px;
+  width: 220px;
   padding-right: 40px;
+  justify-content: flex-start;
+  text-align: left;
+}
+
+.ss-camp-item--final .ss-camp-content {
+  width: 220px;
 }
 
 /* Responsive */
@@ -250,6 +256,7 @@
     margin-bottom: 0;
   }
   .ss-camp-content {
+    flex: none;
     width: 100%;
     margin-left: 0;
     padding: 10px 20px;
@@ -258,5 +265,13 @@
     justify-content: center;
     text-align: center;
     line-height: 1.4;
+  }
+  .ss-camp-item--test .ss-camp-content,
+  .ss-camp-item--final .ss-camp-content {
+    width: 100%;
+  }
+  .ss-camp-item--test .ss-camp-content {
+    justify-content: center;
+    text-align: center;
   }
 }

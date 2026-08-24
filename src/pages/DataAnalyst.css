@@ -162,7 +162,6 @@
 .da-camp-item {
   display: flex;
   align-items: center;
-  justify-content: center;
   gap: 20px;
   position: relative;
 }
@@ -198,8 +197,15 @@
 
 /* Special styles for narrower content bars if needed, but flex-grow handles it elegantly */
 .da-camp-item--test .da-camp-content {
-  flex-grow: 0;
+  flex: 0 0 220px;
+  width: 220px;
   padding-right: 40px;
+  justify-content: flex-start;
+  text-align: left;
+}
+
+.da-camp-item--final .da-camp-content {
+  width: 220px;
 }
 
 .da-camp-icon {
@@ -256,6 +262,8 @@
     margin-bottom: 0;
   }
   .da-camp-content {
+    flex: none;
+    width: 100%;
     margin-left: 0;
     padding: 10px 20px;
     height: auto;
@@ -263,5 +271,13 @@
     justify-content: center;
     text-align: center;
     line-height: 1.4;
+  }
+  .da-camp-item--test .da-camp-content,
+  .da-camp-item--final .da-camp-content {
+    width: 100%;
+  }
+  .da-camp-item--test .da-camp-content {
+    justify-content: center;
+    text-align: center;
   }
 }

@@ -162,7 +162,6 @@
 .gd-camp-item {
   display: flex;
   align-items: center;
-  justify-content: center;
   gap: 20px;
   position: relative;
 }
@@ -197,8 +196,15 @@
 }
 
 .gd-camp-item--test .gd-camp-content {
-  flex-grow: 0;
+  flex: 0 0 220px;
+  width: 220px;
   padding-right: 40px;
+  justify-content: flex-start;
+  text-align: left;
+}
+
+.gd-camp-item--final .gd-camp-content {
+  width: 220px;
 }
 
 /* Responsive */
@@ -243,6 +249,8 @@
     margin-bottom: 0;
   }
   .gd-camp-content {
+    flex: none;
+    width: 100%;
     margin-left: 0;
     padding: 10px 20px;
     height: auto;
@@ -250,5 +258,13 @@
     justify-content: center;
     text-align: center;
     line-height: 1.4;
+  }
+  .gd-camp-item--test .gd-camp-content,
+  .gd-camp-item--final .gd-camp-content {
+    width: 100%;
+  }
+  .gd-camp-item--test .gd-camp-content {
+    justify-content: center;
+    text-align: center;
   }
 }
