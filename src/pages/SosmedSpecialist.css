@@ -200,7 +200,8 @@
 
 .ss-camp-item--final .ss-camp-content {
   flex-grow: 0;
-  padding-right: 60px;
+  justify-content: center;
+  padding-right: 40px;
 }
 
 /* Responsive */

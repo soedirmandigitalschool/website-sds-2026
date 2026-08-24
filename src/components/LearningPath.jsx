@@ -30,7 +30,7 @@ const PATHS = [
     ],
   },
   {
-    title: 'SOSMED SPECIALIST',
+    title: 'SOCIAL MEDIA SPECIALIST',
     path: '/course/sosmed-specialist',
     image: '/assets/social media specialist.jpg',
     points: [
