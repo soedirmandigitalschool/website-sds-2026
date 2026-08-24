@@ -141,6 +141,7 @@
 
 /* Syllabus Section */
 .ss-syllabus {
+  width: 100%;
   max-width: 950px;
   margin: 0 auto;
 }
@@ -217,6 +218,13 @@
 }
 
 @media (max-width: 768px) {
+  .ss-hero,
+  .ss-syllabus {
+    width: 100%;
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+
   .ss-title {
     font-size: 3.5rem;
   }
@@ -233,7 +241,7 @@
   }
   .ss-camp-item {
     flex-direction: column;
-    align-items: stretch;
+    align-items: center;
     gap: 10px;
   }
   .ss-camp-badge {
@@ -241,6 +249,7 @@
     margin-bottom: 0;
   }
   .ss-camp-content {
+    width: 100%;
     margin-left: 0;
     padding: 10px 20px;
     height: auto;
