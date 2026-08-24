@@ -275,6 +275,7 @@
   .da-camp-item--test .da-camp-content {
     flex: 0 0 60px;
     height: 60px;
+    padding: 10px 20px;
     justify-content: center;
     text-align: center;
   }
