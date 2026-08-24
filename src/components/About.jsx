@@ -17,7 +17,7 @@ export default function About() {
         <h2 className="section-title">APA ITU SOEDIRMAN DIGITAL SCHOOL?</h2>
         <p className="about__text">
           Soedirman Digital School (SDS) merupakan program pelatihan digital Unsoed yang
-          diselenggarakan oleh Kemenkoan Riset dan Media BEM UNSOED 2026 untuk membantu dalam
+          diselenggarakan oleh Kemenkoan Riset dan Media BEM Unsoed 2026 untuk membantu dalam
           mengembangkan dan melatih skill digital guna menghadapi era revolusi industri 4.0
           sehingga diharapkan memiliki keahlian digital yang mumpuni dan bisa
           diimplementasikan di kehidupan sehari-hari ataupun di dunia kerja.

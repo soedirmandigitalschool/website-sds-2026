@@ -21,7 +21,7 @@ const BENEFITS = [
   },
   {
     title: 'LMS khusus',
-    desc: 'Pembelajaran dapat dilacak dan dipantau melalui platform Moodle.',
+    desc: 'Pembelajaran dapat dilacak dan dipantau melalui platform khusus.',
     image: '/assets/lms.jpg',
     className: 'benefit-card--lms',
   },
