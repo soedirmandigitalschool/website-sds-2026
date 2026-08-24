@@ -22,7 +22,7 @@ export default function SosmedSpecialist() {
         </div>
 
         <section className="ss-hero container">
-          <h1 className="ss-title">SOSIAL MEDIA SPECIALIST</h1>
+          <h1 className="ss-title">SOCIAL MEDIA SPECIALIST</h1>
           
           <div className={`ss-description-card fade-up ${isLoaded ? 'visible' : ''}`}>
             <p>
@@ -36,7 +36,7 @@ export default function SosmedSpecialist() {
           
           <div className={`ss-action fade-up ${isLoaded ? 'visible' : ''}`} style={{transitionDelay: '0.1s'}}>
             <a href="http://bem-unsoed.com/OpenBootcampSDS2026" target="_blank" rel="noopener noreferrer" className="ss-btn">
-              Daftar Sekarang <span>&#8599;</span>
+              Daftar Sekarang <img src="/assets/panah/Vector 1.png" alt="" aria-hidden="true" />
             </a>
           </div>
         </section>
