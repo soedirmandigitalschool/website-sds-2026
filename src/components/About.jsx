@@ -8,7 +8,7 @@ export default function About() {
   return (
     <section className="about" id="about" ref={ref}>
       <OceanDecorations bubbleCount={4} fishCount={1} waveTop={10} />
-      
+
       {/* Decorative background elements */}
       <img src="/assets/istana.png" alt="" className="about__bg-istana" aria-hidden="true" />
       <img src="/assets/pohon.png" alt="" className="about__bg-pohon" aria-hidden="true" />
@@ -17,7 +17,7 @@ export default function About() {
         <h2 className="section-title">APA ITU SOEDIRMAN DIGITAL SCHOOL?</h2>
         <p className="about__text">
           Soedirman Digital School (SDS) merupakan program pelatihan digital Unsoed yang
-          diselenggarakan oleh Kemenkoan Riset dan Media BEM Unsoed 2026 untuk membantu dalam
+          diselenggarakan oleh Kemenko Riset dan Media BEM Unsoed 2026 untuk membantu dalam
           mengembangkan dan melatih skill digital guna menghadapi era revolusi industri 4.0
           sehingga diharapkan memiliki keahlian digital yang mumpuni dan bisa
           diimplementasikan di kehidupan sehari-hari ataupun di dunia kerja.
