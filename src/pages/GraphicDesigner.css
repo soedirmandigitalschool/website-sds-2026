@@ -196,6 +196,8 @@
 }
 
 .gd-camp-item--test .gd-camp-content {
+  flex: 0 0 60px;
+  height: 60px;
   padding-right: 40px;
   justify-content: flex-start;
   text-align: left;
@@ -258,6 +260,8 @@
     width: 100%;
   }
   .gd-camp-item--test .gd-camp-content {
+    flex: 0 0 60px;
+    height: 60px;
     justify-content: center;
     text-align: center;
   }
