@@ -6,7 +6,7 @@ const BENEFITS = [
   {
     title: 'E-Certificate',
     desc: 'Dapat sertifikat sebagai bentuk apresiasi atas partisipasi dan penyelesaian rangkaian bootcamp Soedirman Digital School.',
-    image: '/assets/1.jpg',
+    image: '/assets/5.jpg',
     className: 'benefit-card--certificate',
   },
   {
@@ -28,7 +28,7 @@ const BENEFITS = [
   {
     title: 'Talkshow',
     desc: 'Memberikan wawasan dan ruang diskusi mengenai tren, kreativitas, serta perkembangan konten diberbagai platform digital.',
-    image: '/assets/4.jpg',
+    image: '/assets/1.jpg',
   },
   {
     title: 'Memperluas Networking',

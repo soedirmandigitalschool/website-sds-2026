@@ -39,6 +39,7 @@
   object-position: top center;
   opacity: 0.95;
   z-index: -2;
+  animation: wavePulse 4s ease-in-out infinite alternate;
 }
 
 .gd-background-wave-lower {
@@ -51,6 +52,8 @@
   object-position: top center;
   opacity: 0.95;
   z-index: -1;
+  animation: wavePulse 4s ease-in-out infinite alternate;
+  animation-delay: -2s;
 }
 
 .gd-background-tree {

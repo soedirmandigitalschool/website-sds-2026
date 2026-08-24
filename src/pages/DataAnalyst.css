@@ -53,6 +53,7 @@
   background-position: top center;
   background-repeat: no-repeat;
   z-index: -2;
+  animation: wavePulse 4s ease-in-out infinite alternate;
 }
 
 .da-wave-overlay {
@@ -66,6 +67,8 @@
   background-position: top center;
   background-repeat: no-repeat;
   z-index: -1;
+  animation: wavePulse 4s ease-in-out infinite alternate;
+  animation-delay: -2s;
 }
 
 /* Hero Section */

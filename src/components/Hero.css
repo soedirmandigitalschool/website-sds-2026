@@ -190,10 +190,34 @@
   align-items: flex-end;
 }
 
-.hero__waves-svg {
+.hero__wave {
+  position: absolute;
+  bottom: 0;
+  left: 0;
   width: 100%;
-  height: 100%;
-  min-height: 250px;
+  height: 25%;
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  animation: wavePulse 4s ease-in-out infinite alternate;
+}
+
+.hero__wave-back {
+  background-image: url("/assets/Vector 1819.png");
+  opacity: 0.72;
+  z-index: 1;
+}
+
+.hero__wave-front {
+  z-index: 3;
+  height: 19%;
+  background-image: url("/assets/Vector 1824.png");
+  animation-delay: -2s; /* Offset animation for front wave */
+}
+
+@keyframes wavePulse {
+  0% { transform: scaleY(0.9) translateY(5%); }
+  100% { transform: scaleY(1.05) translateY(0); }
 }
 
 /* ===== Glow behind mascot ===== */

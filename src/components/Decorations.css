@@ -117,20 +117,22 @@
   pointer-events: none;
   z-index: 1;
   color: var(--color-white);
+  transform-origin: bottom center;
 }
 
 .ocean-element img {
-  max-width: 300px;
+  max-width: 500px;
 }
 
 .ocean-ship {
   position: absolute;
   pointer-events: none;
   z-index: 1;
+  transform-origin: bottom center;
 }
 
 .ocean-ship img {
-  max-width: 400px;
+  max-width: 600px;
 }
 
 .ocean-coral {

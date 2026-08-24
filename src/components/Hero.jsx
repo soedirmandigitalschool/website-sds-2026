@@ -48,32 +48,10 @@ export default function Hero() {
       {/* Bottom scene: layered vector waves + mascot */}
       <div className="hero__bottom-scene">
 
-        {/* SVG Waves Background */}
+        {/* Vector Waves Background matching Coming Soon */}
         <div className="hero__waves-container">
-          <svg className="hero__waves-svg" viewBox="0 0 1440 450" preserveAspectRatio="none">
-            <defs>
-              <filter id="wave-glow" x="-20%" y="-20%" width="140%" height="140%">
-                <feGaussianBlur stdDeviation="15" result="blur" />
-                <feComposite in="SourceGraphic" in2="blur" operator="over" />
-              </filter>
-            </defs>
-
-
-            {/* Middle Teal/Shadow Layer */}
-            <path fill="#157c91" filter="url(#wave-glow)">
-              <animate
-                attributeName="d"
-                dur="6s"
-                repeatCount="indefinite"
-                values="
-                  M0,150 C250,180 380,280 520,340 C620,380 670,420 720,420 C770,420 820,380 920,340 C1060,280 1190,180 1440,150 L1440,450 L0,450 Z;
-                  M0,160 C230,160 390,290 530,330 C610,360 680,440 720,440 C760,440 830,360 910,330 C1050,290 1210,160 1440,160 L1440,450 L0,450 Z;
-                  M0,150 C250,180 380,280 520,340 C620,380 670,420 720,420 C770,420 820,380 920,340 C1060,280 1190,180 1440,150 L1440,450 L0,450 Z
-                "
-              />
-            </path>
-
-          </svg>
+          <div className="hero__wave hero__wave-back" aria-hidden="true"></div>
+          <div className="hero__wave hero__wave-front" aria-hidden="true"></div>
         </div>
 
         {/* Glow behind mascot */}

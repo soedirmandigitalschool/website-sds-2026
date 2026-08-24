@@ -113,27 +113,25 @@ export function OceanDecorations({ bubbleCount = 5, fishCount = 4, waveTop = 20,
       <WaveLine top={waveTop + 40} opacity={0.15} />
       <WaveLine top={waveTop + 80} opacity={0.1} />
       
-      {showCastle && <Castle top={40} right={5} opacity={0.15} scale={0.8} />}
-      {showShip && <ShipSilhouette top={10} left={-20} opacity={0.8} scale={0.5} />}
+      {showCastle && <Castle top={20} right={5} opacity={0.15} scale={1.2} />}
+      {showShip && <ShipSilhouette top={15} left={-10} opacity={0.8} scale={0.8} />}
       {showCoral && (
         <>
-          <Coral bottom={5} left={10} opacity={0.6} scale={1.2} />
-          <Coral bottom={2} left={85} opacity={0.5} scale={0.9} />
+          <Coral bottom={0} left={10} opacity={0.6} scale={1.5} />
+          <Coral bottom={0} left={85} opacity={0.5} scale={1.2} />
         </>
       )}
       {showPalmTree && (
         <>
           {/* Left grove */}
-          <PalmTree bottom={-15} left={-10} opacity={0.12} scale={1.8} />
-          <PalmTree bottom={-5} left={-2} opacity={0.15} scale={1.2} />
-          <PalmTree bottom={5} left={8} opacity={0.1} scale={0.8} />
-          <PalmTree bottom={15} left={-5} opacity={0.08} scale={1.5} />
+          <PalmTree bottom={0} left={-5} opacity={0.12} scale={2.2} />
+          <PalmTree bottom={0} left={5} opacity={0.15} scale={1.6} />
+          <PalmTree bottom={5} left={15} opacity={0.1} scale={1.2} />
           
           {/* Right grove */}
-          <PalmTree bottom={-20} right={-15} opacity={0.1} scale={2} />
-          <PalmTree bottom={-5} right={-2} opacity={0.15} scale={1.1} />
-          <PalmTree bottom={10} right={5} opacity={0.12} scale={1.3} />
-          <PalmTree bottom={25} right={-8} opacity={0.08} scale={1.6} />
+          <PalmTree bottom={0} right={-5} opacity={0.1} scale={2.5} />
+          <PalmTree bottom={0} right={5} opacity={0.15} scale={1.5} />
+          <PalmTree bottom={5} right={15} opacity={0.12} scale={1.8} />
         </>
       )}
       {showSunset && <Sunset bottom={10} left={40} opacity={0.3} scale={3} />}
