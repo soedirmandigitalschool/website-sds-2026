@@ -141,6 +141,7 @@
 
 /* Syllabus Section */
 .gd-syllabus {
+  width: 100%;
   max-width: 950px;
   margin: 0 auto;
 }
@@ -161,6 +162,7 @@
 .gd-camp-item {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 20px;
   position: relative;
 }
