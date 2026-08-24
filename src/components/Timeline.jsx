@@ -3,7 +3,7 @@ import { OceanDecorations } from './Decorations';
 import './Timeline.css';
 
 const TIMELINE_DATA = [
-  { date: '12 - 21 Agustus 2026', title: 'Open Registration Internal', side: 'left' },
+  { date: '12 - 21 Agustus 2026', title: 'Open Regristration Webinar', side: 'left' },
   { date: '22 Agustus 2026', title: 'Webinar', side: 'right' },
   { date: '24-28 Agustus 2026', title: 'Open Registration Umum', side: 'left' },
   { date: '29 - 30 Agustus 2026', title: 'Pre-Test', side: 'right' },
