@@ -188,6 +188,7 @@
   height: 60px;
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   padding: 0 40px;
   border-radius: 100px;
   box-shadow: 0 4px 15px rgba(0,0,0,0.05);
@@ -195,12 +196,7 @@
 
 .gd-camp-item--test .gd-camp-content {
   flex-grow: 0;
-  padding-right: 60px;
-}
-
-.gd-camp-item--final .gd-camp-content {
-  flex-grow: 0;
-  padding-right: 60px;
+  padding-right: 40px;
 }
 
 /* Responsive */
