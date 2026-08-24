@@ -6,7 +6,7 @@ const BENEFITS = [
   {
     title: 'E-Certificate',
     desc: 'Dapat sertifikat sebagai bentuk apresiasi atas partisipasi dan penyelesaian rangkaian bootcamp Soedirman Digital School.',
-    image: '/certificate.png',
+    image: '/assets/E CERTIFICATE.png',
     className: 'benefit-card--certificate',
   },
   {
