@@ -1,7 +1,7 @@
 .timeline {
   position: relative;
   padding: 40px 0 60px;
-  background: linear-gradient(180deg, #88c880 0%, #17aabb 30%, #0e7e92 60%, #0c586c 100%);
+  background: transparent;
   overflow: hidden;
 }
 

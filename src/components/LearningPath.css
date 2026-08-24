@@ -1,7 +1,7 @@
 .learning-path {
   position: relative;
   padding: 40px 0 60px;
-  background: linear-gradient(180deg, #0c586c 0%, #0c3d5f 100%);
+  background: transparent;
 }
 
 .learning-path__grid {

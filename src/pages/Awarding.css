@@ -1,17 +1,7 @@
 /* ===== Awarding Page ===== */
 .awarding-page {
   position: relative;
-  background: linear-gradient(
-    180deg,
-    #0b3350 0%,
-    #0d4a6a 12%,
-    #0f6880 30%,
-    #13909e 50%,
-    #17a5b5 65%,
-    #15a0af 78%,
-    #0f7a90 90%,
-    #0a5c75 100%
-  );
+  background: transparent;
   min-height: 100vh;
   padding-bottom: 80px;
   color: var(--color-white);

@@ -1,7 +1,7 @@
 .faq {
   position: relative;
-  padding: 40px 0 60px;
-  background: linear-gradient(180deg, #0c3d5f 0%, #0c4c6e 50%, #106b82 100%);
+  padding: 40px 0 80px;
+  background: transparent;
 }
 
 .faq__list {

@@ -99,7 +99,20 @@ body {
   font-size: 16px;
   line-height: 1.6;
   color: var(--color-dark-text);
-  background: var(--color-turquoise);
+  
+  /* Global Ocean Depth Animated Background */
+  background: linear-gradient(
+    180deg,
+    var(--color-sky-light) 0%,
+    var(--color-turquoise) 20%,
+    var(--color-teal) 45%,
+    var(--color-ocean) 70%,
+    var(--color-navy) 100%
+  );
+  background-size: 100% 400%;
+  animation: oceanDepth 25s ease-in-out infinite alternate;
+  background-attachment: fixed;
+  
   overflow-x: hidden;
 }
 
@@ -222,6 +235,15 @@ h1, h2, h3, h4, h5, h6 {
   to {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+@keyframes oceanDepth {
+  0% {
+    background-position: 50% 0%;
+  }
+  100% {
+    background-position: 50% 100%;
   }
 }
 

@@ -14,7 +14,7 @@
   height: 100vh; /* Fill viewport */
   isolation: isolate;
   overflow: hidden;
-  background: linear-gradient(180deg, #dce98b 0%, #abd69b 23%, #4bbcac 56%, #079fc1 100%);
+  background: transparent;
   padding-top: 80px; /* Space for navbar */
 }
 

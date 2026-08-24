@@ -1,5 +1,5 @@
 .course-page {
-  background: linear-gradient(180deg, #b0e69b 0%, #159eaf 40%, #0a698a 100%);
+  background: transparent;
   min-height: 100vh;
   padding: 120px 24px 60px;
   color: var(--color-white);

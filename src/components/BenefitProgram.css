@@ -1,7 +1,7 @@
 .benefit {
   position: relative;
   padding: 20px 0 50px;
-  background: linear-gradient(180deg, #20b0b0 0%, #88c880 100%);
+  background: transparent;
 }
 
 .benefit__grid {

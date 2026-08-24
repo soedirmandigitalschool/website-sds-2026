@@ -7,16 +7,7 @@
   overflow-x: clip;
   overflow-y: visible;
   padding: 130px 0 0;
-  /* Full background — deep teal matching reference */
-  background: linear-gradient(
-    180deg,
-    #0b3350 0%,
-    #0d4a6a 18%,
-    #0f6880 40%,
-    #13909e 65%,
-    #17a5b5 85%,
-    #18a8b8 100%
-  );
+  background: transparent;
   min-height: 100vh;
 }
 

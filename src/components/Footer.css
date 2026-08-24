@@ -1,7 +1,8 @@
 .footer {
   position: relative;
-  background: linear-gradient(180deg, #106b82 0%, #0a1628 100%);
-  padding: 100px 0 20px;
+  background: transparent;
+  color: var(--color-white);
+  padding: 80px 0 20px;
   overflow: hidden;
   margin-top: -20px; /* Blend seamlessly with FAQ */
 }
