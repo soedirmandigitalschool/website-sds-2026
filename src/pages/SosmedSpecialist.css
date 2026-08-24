@@ -199,11 +199,10 @@
 }
 
 .ss-camp-item--test .ss-camp-content {
-  flex: 0 0 60px;
-  height: 60px;
   padding-right: 40px;
   justify-content: flex-start;
   text-align: left;
+  white-space: nowrap;
 }
 
 /* Responsive */
@@ -270,10 +269,9 @@
     width: 100%;
   }
   .ss-camp-item--test .ss-camp-content {
-    flex: 0 0 60px;
-    height: 60px;
     padding: 10px 20px;
     justify-content: center;
     text-align: center;
+    white-space: nowrap;
   }
 }
