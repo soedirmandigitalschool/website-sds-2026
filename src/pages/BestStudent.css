@@ -138,7 +138,7 @@
   left: 14%;
   width: clamp(100px, 14vw, 210px);
   height: auto;
-  animation: floatSlow 6s ease-in-out infinite;
+  animation: floatSlowFlipped 6s ease-in-out infinite;
 }
 
 .bs-wave {

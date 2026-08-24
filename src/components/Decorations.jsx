@@ -52,7 +52,7 @@ export function Castle({ top, right, opacity, scale = 1 }) {
 
 export function ShipSilhouette({ top, left, opacity, scale = 1, animationDuration = '20s' }) {
   return (
-    <div className="ocean-ship" style={{ top: `${top}%`, left: `${left}%`, opacity, transform: `scale(${scale})`, animationDuration }}>
+    <div className="ocean-ship" style={{ top: `${top}%`, left: `${left}%`, opacity, transform: `scale(${scale}) scaleX(-1)`, animationDuration }}>
       <img src="/assets/kapal.png" alt="" style={{ filter: 'brightness(0) invert(1) opacity(0.2)' }} />
     </div>
   );
@@ -114,7 +114,7 @@ export function OceanDecorations({ bubbleCount = 5, fishCount = 4, waveTop = 20,
       <WaveLine top={waveTop + 80} opacity={0.1} />
       
       {showCastle && <Castle top={20} right={5} opacity={0.15} scale={1.2} />}
-      {showShip && <ShipSilhouette top={15} left={-10} opacity={0.8} scale={0.8} />}
+      {showShip && <ShipSilhouette top={15} left={8} opacity={0.8} scale={0.8} />}
       {showCoral && (
         <>
           <Coral bottom={0} left={10} opacity={0.6} scale={1.5} />
@@ -124,14 +124,14 @@ export function OceanDecorations({ bubbleCount = 5, fishCount = 4, waveTop = 20,
       {showPalmTree && (
         <>
           {/* Left grove */}
-          <PalmTree bottom={0} left={-5} opacity={0.12} scale={2.2} />
-          <PalmTree bottom={0} left={5} opacity={0.15} scale={1.6} />
-          <PalmTree bottom={5} left={15} opacity={0.1} scale={1.2} />
+          <PalmTree bottom={0} left={2} opacity={0.12} scale={3.2} />
+          <PalmTree bottom={0} left={10} opacity={0.15} scale={2.4} />
+          <PalmTree bottom={5} left={20} opacity={0.1} scale={1.8} />
           
           {/* Right grove */}
-          <PalmTree bottom={0} right={-5} opacity={0.1} scale={2.5} />
-          <PalmTree bottom={0} right={5} opacity={0.15} scale={1.5} />
-          <PalmTree bottom={5} right={15} opacity={0.12} scale={1.8} />
+          <PalmTree bottom={0} right={2} opacity={0.1} scale={3.5} />
+          <PalmTree bottom={0} right={10} opacity={0.15} scale={2.4} />
+          <PalmTree bottom={5} right={20} opacity={0.12} scale={2.6} />
         </>
       )}
       {showSunset && <Sunset bottom={10} left={40} opacity={0.3} scale={3} />}
