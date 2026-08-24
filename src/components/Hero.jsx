@@ -48,6 +48,19 @@ export default function Hero() {
       {/* Bottom scene: layered vector waves + mascot */}
       <div className="hero__bottom-scene">
 
+        {/* Siluet Ikan Bergerombol */}
+        <div className="hero__fish-school" aria-hidden="true">
+          <svg viewBox="0 0 200 100" fill="currentColor">
+            <path d="M95,25 Q80,10 60,15 Q40,20 20,25 Q5,30 0,25 Q5,20 20,25 Q40,30 60,35 Q80,40 95,25 Z M5,25 L15,15 L15,35 Z" transform="translate(120, 10) scale(0.6)" />
+            <path d="M95,25 Q80,10 60,15 Q40,20 20,25 Q5,30 0,25 Q5,20 20,25 Q40,30 60,35 Q80,40 95,25 Z M5,25 L15,15 L15,35 Z" transform="translate(60, 30) scale(0.8)" />
+            <path d="M95,25 Q80,10 60,15 Q40,20 20,25 Q5,30 0,25 Q5,20 20,25 Q40,30 60,35 Q80,40 95,25 Z M5,25 L15,15 L15,35 Z" transform="translate(10, 50) scale(0.5)" />
+            <path d="M95,25 Q80,10 60,15 Q40,20 20,25 Q5,30 0,25 Q5,20 20,25 Q40,30 60,35 Q80,40 95,25 Z M5,25 L15,15 L15,35 Z" transform="translate(80, 60) scale(0.7)" />
+            <path d="M95,25 Q80,10 60,15 Q40,20 20,25 Q5,30 0,25 Q5,20 20,25 Q40,30 60,35 Q80,40 95,25 Z M5,25 L15,15 L15,35 Z" transform="translate(150, 40) scale(0.5)" />
+            <path d="M95,25 Q80,10 60,15 Q40,20 20,25 Q5,30 0,25 Q5,20 20,25 Q40,30 60,35 Q80,40 95,25 Z M5,25 L15,15 L15,35 Z" transform="translate(40, 70) scale(0.6)" />
+            <path d="M95,25 Q80,10 60,15 Q40,20 20,25 Q5,30 0,25 Q5,20 20,25 Q40,30 60,35 Q80,40 95,25 Z M5,25 L15,15 L15,35 Z" transform="translate(110, 75) scale(0.4)" />
+          </svg>
+        </div>
+
         {/* Vector Waves Background matching Coming Soon */}
         <div className="hero__waves-container">
           <div className="hero__wave hero__wave-back" aria-hidden="true"></div>

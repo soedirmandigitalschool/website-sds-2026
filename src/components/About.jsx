@@ -11,7 +11,6 @@ export default function About() {
 
       {/* Decorative background elements */}
       <img src="/assets/istana.png" alt="" className="about__bg-istana" aria-hidden="true" />
-      <img src="/assets/pohon.png" alt="" className="about__bg-pohon" aria-hidden="true" />
 
       <div className={`about__inner container fade-up ${isInView ? 'visible' : ''}`}>
         <h2 className="section-title">APA ITU SOEDIRMAN DIGITAL SCHOOL?</h2>

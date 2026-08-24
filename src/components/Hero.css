@@ -177,6 +177,26 @@
   justify-content: center;
 }
 
+/* ===== School of Fish ===== */
+.hero__fish-school {
+  position: absolute;
+  top: 15%;
+  left: -200px;
+  width: 150px;
+  height: auto;
+  color: rgba(255, 255, 255, 0.15); /* Silhouette look */
+  z-index: 2;
+  animation: schoolSwim 25s linear infinite;
+  pointer-events: none;
+}
+
+@keyframes schoolSwim {
+  0% { transform: translateX(0) translateY(0); }
+  33% { transform: translateX(40vw) translateY(-30px); }
+  66% { transform: translateX(80vw) translateY(20px); }
+  100% { transform: translateX(120vw) translateY(-10px); }
+}
+
 /* ===== Vector Waves Container ===== */
 .hero__waves-container {
   position: absolute;
