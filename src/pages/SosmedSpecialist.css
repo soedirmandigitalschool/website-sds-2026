@@ -196,15 +196,9 @@
 }
 
 .ss-camp-item--test .ss-camp-content {
-  flex: 0 0 220px;
-  width: 220px;
   padding-right: 40px;
   justify-content: flex-start;
   text-align: left;
-}
-
-.ss-camp-item--final .ss-camp-content {
-  width: 220px;
 }
 
 /* Responsive */

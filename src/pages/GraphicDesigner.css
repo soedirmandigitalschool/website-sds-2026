@@ -196,15 +196,9 @@
 }
 
 .gd-camp-item--test .gd-camp-content {
-  flex: 0 0 220px;
-  width: 220px;
   padding-right: 40px;
   justify-content: flex-start;
   text-align: left;
-}
-
-.gd-camp-item--final .gd-camp-content {
-  width: 220px;
 }
 
 /* Responsive */

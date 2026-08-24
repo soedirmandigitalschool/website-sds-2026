@@ -197,15 +197,9 @@
 
 /* Special styles for narrower content bars if needed, but flex-grow handles it elegantly */
 .da-camp-item--test .da-camp-content {
-  flex: 0 0 220px;
-  width: 220px;
   padding-right: 40px;
   justify-content: flex-start;
   text-align: left;
-}
-
-.da-camp-item--final .da-camp-content {
-  width: 220px;
 }
 
 .da-camp-icon {
