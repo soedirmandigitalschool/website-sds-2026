@@ -188,6 +188,7 @@
   height: 60px;
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   padding: 0 40px;
   border-radius: 100px;
   box-shadow: 0 4px 15px rgba(0,0,0,0.05);
@@ -195,12 +196,6 @@
 
 .ss-camp-item--test .ss-camp-content {
   flex-grow: 0;
-  padding-right: 60px;
-}
-
-.ss-camp-item--final .ss-camp-content {
-  flex-grow: 0;
-  justify-content: center;
   padding-right: 40px;
 }
 
