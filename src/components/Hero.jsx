@@ -47,7 +47,7 @@ export default function Hero() {
 
       {/* Bottom scene: layered vector waves + mascot */}
       <div className="hero__bottom-scene">
-        
+
         {/* SVG Waves Background */}
         <div className="hero__waves-container">
           <svg className="hero__waves-svg" viewBox="0 0 1440 450" preserveAspectRatio="none">
@@ -61,10 +61,10 @@ export default function Hero() {
 
             {/* Middle Teal/Shadow Layer */}
             <path fill="#157c91" filter="url(#wave-glow)">
-              <animate 
-                attributeName="d" 
-                dur="6s" 
-                repeatCount="indefinite" 
+              <animate
+                attributeName="d"
+                dur="6s"
+                repeatCount="indefinite"
                 values="
                   M0,150 C250,180 380,280 520,340 C620,380 670,420 720,420 C770,420 820,380 920,340 C1060,280 1190,180 1440,150 L1440,450 L0,450 Z;
                   M0,160 C230,160 390,290 530,330 C610,360 680,440 720,440 C760,440 830,360 910,330 C1050,290 1210,160 1440,160 L1440,450 L0,450 Z;
@@ -72,7 +72,7 @@ export default function Hero() {
                 "
               />
             </path>
-            
+
           </svg>
         </div>
 
@@ -80,7 +80,7 @@ export default function Hero() {
         <div className="hero__glow" aria-hidden="true"></div>
 
         {/* Mascot centered in the valley */}
-        <div className={`hero__character fade-up ${isLoaded ? 'visible' : ''}`} style={{transitionDelay: '0.3s'}}>
+        <div className={`hero__character fade-up ${isLoaded ? 'visible' : ''}`} style={{ transitionDelay: '0.3s' }}>
           <img src="/assets/MASKOT FIN.png" alt="SDS Pirate Mascot" />
         </div>
       </div>
