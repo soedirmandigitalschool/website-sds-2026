@@ -82,6 +82,69 @@
 .hero__bird--7 { width: 24px; top: 14%; right: 10%; animation-delay: -1.5s; opacity: 0.7; }
 .hero__bird--8 { width: 16px; top: 9%;  right: 13%; animation-delay: -6s; opacity: 0.5; }
 
+/* ===== Shooting Stars ===== */
+.hero__shooting-stars {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.shooting-star {
+  position: absolute;
+  width: 150px;
+  height: 2px;
+  /* Head is on the left, tail fades to the right */
+  background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%);
+  border-radius: 50%;
+  filter: drop-shadow(0 0 6px rgba(255, 255, 255, 1));
+  opacity: 0;
+  animation: shootingStar 6s linear infinite;
+}
+
+/* Glowing comet head */
+.shooting-star::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: #fff;
+  box-shadow: 0 0 15px 4px rgba(255, 255, 255, 0.9), 0 0 25px 8px rgba(125, 216, 228, 0.6);
+}
+
+.shooting-star:nth-child(1) { top: 10%; left: 80%; animation-delay: 0s; }
+.shooting-star:nth-child(2) { top: 5%; left: 50%; animation-delay: 2.5s; animation-duration: 5s; }
+.shooting-star:nth-child(3) { top: 20%; left: 90%; animation-delay: 4.2s; animation-duration: 7s; }
+.shooting-star:nth-child(4) { top: -10%; left: 70%; animation-delay: 6s; animation-duration: 4.5s; }
+.shooting-star:nth-child(5) { top: 15%; left: 110%; animation-delay: 1.5s; animation-duration: 8s; }
+.shooting-star:nth-child(6) { top: -5%; left: 40%; animation-delay: 3.8s; animation-duration: 5.5s; }
+
+@keyframes shootingStar {
+  0% { 
+    transform: translateX(0) translateY(0) rotate(-45deg); 
+    opacity: 0; 
+  }
+  5% { 
+    opacity: 1; 
+  }
+  20% { 
+    transform: translateX(-800px) translateY(800px) rotate(-45deg); 
+    opacity: 0; 
+  }
+  100% { 
+    transform: translateX(-800px) translateY(800px) rotate(-45deg); 
+    opacity: 0; 
+  }
+}
+
 /* ===== Content ===== */
 .hero__content {
   position: relative;
@@ -180,14 +243,34 @@
 /* ===== School of Fish ===== */
 .hero__fish-school {
   position: absolute;
+  color: rgba(255, 255, 255, 0.12); /* Silhouette look */
+  z-index: 2;
+  pointer-events: none;
+}
+
+.hero__fish-school--1 {
   top: 15%;
   left: -200px;
   width: 150px;
-  height: auto;
-  color: rgba(255, 255, 255, 0.15); /* Silhouette look */
-  z-index: 2;
   animation: schoolSwim 25s linear infinite;
-  pointer-events: none;
+}
+
+.hero__fish-school--2 {
+  top: 45%;
+  left: -150px;
+  width: 120px;
+  animation: schoolSwim 35s linear infinite;
+  animation-delay: 8s;
+  color: rgba(255, 255, 255, 0.08); /* slightly deeper/fainter */
+}
+
+.hero__fish-school--3 {
+  top: 60%;
+  left: 0;
+  width: 140px;
+  animation: schoolSwimReverse 28s linear infinite;
+  animation-delay: 2s;
+  color: rgba(255, 255, 255, 0.1);
 }
 
 @keyframes schoolSwim {
@@ -197,17 +280,25 @@
   100% { transform: translateX(120vw) translateY(-10px); }
 }
 
-/* ===== Vector Waves Container ===== */
+@keyframes schoolSwimReverse {
+  0% { transform: translateX(120vw) translateY(0) scaleX(-1); }
+  33% { transform: translateX(80vw) translateY(30px) scaleX(-1); }
+  66% { transform: translateX(40vw) translateY(-20px) scaleX(-1); }
+  100% { transform: translateX(-20vw) translateY(10px) scaleX(-1); }
+}
+
+/* ===== Seamless Vector Waves Container ===== */
 .hero__waves-container {
   position: absolute;
-  bottom: -2px; /* Fix any gap at the bottom */
+  bottom: -2px; 
   left: 0;
   width: 100%;
-  height: 100%;
+  height: 25%;
   z-index: 4;
   pointer-events: none;
-  display: flex;
-  align-items: flex-end;
+  /* Blend the white box at the bottom seamlessly into transparent */
+  -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 30%, rgba(0,0,0,0) 90%);
+  mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 30%, rgba(0,0,0,0) 90%);
 }
 
 .hero__wave {
@@ -215,7 +306,7 @@
   bottom: 0;
   left: 0;
   width: 100%;
-  height: 25%;
+  height: 100%;
   background-position: center bottom;
   background-repeat: no-repeat;
   background-size: 100% 100%;
@@ -223,16 +314,15 @@
 }
 
 .hero__wave-back {
+  z-index: 1;
   background-image: url("/assets/Vector 1819.png");
   opacity: 0.72;
-  z-index: 1;
 }
 
 .hero__wave-front {
   z-index: 3;
-  height: 19%;
+  animation-delay: -2s;
   background-image: url("/assets/Vector 1824.png");
-  animation-delay: -2s; /* Offset animation for front wave */
 }
 
 @keyframes wavePulse {

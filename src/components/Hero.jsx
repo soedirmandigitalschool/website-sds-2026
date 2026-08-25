@@ -31,6 +31,16 @@ export default function Hero() {
       <img src="/assets/burung.png" alt="" className="hero__bird hero__bird--7" aria-hidden="true" />
       <img src="/assets/burung.png" alt="" className="hero__bird hero__bird--8" aria-hidden="true" />
 
+      {/* Shooting Stars / Comets */}
+      <div className="hero__shooting-stars" aria-hidden="true">
+        <div className="shooting-star"></div>
+        <div className="shooting-star"></div>
+        <div className="shooting-star"></div>
+        <div className="shooting-star"></div>
+        <div className="shooting-star"></div>
+        <div className="shooting-star"></div>
+      </div>
+
       {/* Main content */}
       <div className={`hero__content fade-up ${isLoaded ? 'visible' : ''}`}>
         <h1 className="hero__title">SOEDIRMAN DIGITAL SCHOOL 2026</h1>
@@ -48,8 +58,8 @@ export default function Hero() {
       {/* Bottom scene: layered vector waves + mascot */}
       <div className="hero__bottom-scene">
 
-        {/* Siluet Ikan Bergerombol */}
-        <div className="hero__fish-school" aria-hidden="true">
+        {/* Fish School 1 */}
+        <div className="hero__fish-school hero__fish-school--1" aria-hidden="true">
           <svg viewBox="0 0 200 100" fill="currentColor">
             <path d="M95,25 Q80,10 60,15 Q40,20 20,25 Q5,30 0,25 Q5,20 20,25 Q40,30 60,35 Q80,40 95,25 Z M5,25 L15,15 L15,35 Z" transform="translate(120, 10) scale(0.6)" />
             <path d="M95,25 Q80,10 60,15 Q40,20 20,25 Q5,30 0,25 Q5,20 20,25 Q40,30 60,35 Q80,40 95,25 Z M5,25 L15,15 L15,35 Z" transform="translate(60, 30) scale(0.8)" />
@@ -61,10 +71,31 @@ export default function Hero() {
           </svg>
         </div>
 
-        {/* Vector Waves Background matching Coming Soon */}
-        <div className="hero__waves-container">
-          <div className="hero__wave hero__wave-back" aria-hidden="true"></div>
-          <div className="hero__wave hero__wave-front" aria-hidden="true"></div>
+        {/* Fish School 2 (Deeper, slower) */}
+        <div className="hero__fish-school hero__fish-school--2" aria-hidden="true">
+          <svg viewBox="0 0 200 100" fill="currentColor">
+            <path d="M95,25 Q80,10 60,15 Q40,20 20,25 Q5,30 0,25 Q5,20 20,25 Q40,30 60,35 Q80,40 95,25 Z M5,25 L15,15 L15,35 Z" transform="translate(60, 30) scale(0.5)" />
+            <path d="M95,25 Q80,10 60,15 Q40,20 20,25 Q5,30 0,25 Q5,20 20,25 Q40,30 60,35 Q80,40 95,25 Z M5,25 L15,15 L15,35 Z" transform="translate(10, 50) scale(0.3)" />
+            <path d="M95,25 Q80,10 60,15 Q40,20 20,25 Q5,30 0,25 Q5,20 20,25 Q40,30 60,35 Q80,40 95,25 Z M5,25 L15,15 L15,35 Z" transform="translate(80, 60) scale(0.4)" />
+            <path d="M95,25 Q80,10 60,15 Q40,20 20,25 Q5,30 0,25 Q5,20 20,25 Q40,30 60,35 Q80,40 95,25 Z M5,25 L15,15 L15,35 Z" transform="translate(150, 40) scale(0.35)" />
+          </svg>
+        </div>
+
+        {/* Fish School 3 (Swimming right to left) */}
+        <div className="hero__fish-school hero__fish-school--3" aria-hidden="true">
+          <svg viewBox="0 0 200 100" fill="currentColor">
+            <path d="M95,25 Q80,10 60,15 Q40,20 20,25 Q5,30 0,25 Q5,20 20,25 Q40,30 60,35 Q80,40 95,25 Z M5,25 L15,15 L15,35 Z" transform="translate(120, 10) scale(0.5)" />
+            <path d="M95,25 Q80,10 60,15 Q40,20 20,25 Q5,30 0,25 Q5,20 20,25 Q40,30 60,35 Q80,40 95,25 Z M5,25 L15,15 L15,35 Z" transform="translate(60, 30) scale(0.6)" />
+            <path d="M95,25 Q80,10 60,15 Q40,20 20,25 Q5,30 0,25 Q5,20 20,25 Q40,30 60,35 Q80,40 95,25 Z M5,25 L15,15 L15,35 Z" transform="translate(10, 50) scale(0.4)" />
+          </svg>
+        </div>
+
+
+
+        {/* Seamless Vector Waves Background (Masked PNGs) */}
+        <div className="hero__waves-container" aria-hidden="true">
+          <div className="hero__wave hero__wave-back"></div>
+          <div className="hero__wave hero__wave-front"></div>
         </div>
 
         {/* Glow behind mascot */}
