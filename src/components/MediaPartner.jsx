@@ -14,7 +14,6 @@ export default function MediaPartner() {
           <div className="media-partner__logo"><img src="/assets/MP1.png" alt="Media Partner" /></div>
           <div className="media-partner__logo"><img src="/assets/MP2.png" alt="Media Partner" /></div>
           <div className="media-partner__logo"><img src="/assets/MP3.png" alt="Media Partner" /></div>
-          <div className="media-partner__logo"><img src="/assets/MP4.png" alt="Media Partner" /></div>
           <div className="media-partner__logo"><img src="/assets/MP5.png" alt="Media Partner" /></div>
           <div className="media-partner__logo"><img src="/assets/MP6.png" alt="Media Partner" /></div>
           <div className="media-partner__logo"><img src="/assets/MP7.png" alt="Media Partner" /></div>
