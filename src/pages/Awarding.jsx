@@ -40,9 +40,9 @@ export default function Awarding() {
         <div className="awarding-info__details">
           <h3 className="awarding-info__details-title">Detail Acara</h3>
           <ul className="awarding-info__details-list">
-            <li><span>Tanggal</span> : Segera Hadir</li>
-            <li><span>Waktu</span> : Segera Hadir</li>
-            <li><span>Tempat</span> : Segera Hadir</li>
+            <li><span>Tanggal</span> : 24 Oktober 2026</li>
+            <li><span>Waktu</span> : 08.00 - 13.00</li>
+            <li><span>Tempat</span> : Gedung FMIPA</li>
           </ul>
         </div>
       </section>
